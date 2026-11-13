@@ -131,7 +131,7 @@ table.grid td:last-child,table.grid th:last-child{padding-right:0}
 <p class="eyebrow">Hướng dẫn sử dụng</p>
 <h1>Dùng Côn Bằng TV cho thật thuận tay.</h1>
 <p class="lead">Từ hồ sơ riêng cho từng người, chế độ trẻ em, trang chủ theo ý mình, tới cách vào được trang bị chặn và đổi server khi phim chậm.</p>
-<p class="meta">Theo bản Android TV 2.17 · iPad / iPhone 1.17 · Windows 1.15 — cập nhật 13/11/2026</p>
+<p class="meta">Theo bản Android TV 2.17 · iPad / iPhone 1.17 · Windows 1.15 · Mac 1.17 — cập nhật 13/11/2026</p>
 </section>
 
 <ol class="toc">
@@ -393,7 +393,7 @@ table.grid td:last-child,table.grid th:last-child{padding-right:0}
 
 <div class="layers">
 <div class="layer"><span class="state">Bật sẵn</span><h4>DNS mã hoá</h4><p>Hỏi địa chỉ trang qua đường mã hoá (NextDNS → Cloudflare → Google). Nhà mạng hay bộ lọc trong nhà không đọc, không sửa được. Máy chủ nào bị chặn thì app hỏi máy sau; hỏng hết thì dùng DNS của máy — không bao giờ làm app hỏng.</p></div>
-<div class="layer"><span class="state">Mức 1 bật sẵn</span><h4>Vượt chặn nhà mạng</h4><p>Nhà mạng chặn bằng cách đọc tên trang lúc mở kết nối. App chia nhỏ gói đầu tiên để máy soi không đọc được tên — không cần VPN. Mức 2 đảo thêm thứ tự gói, cho khi Mức 1 không còn lọt. Từ bản 2.17 (iPad / iPhone 1.17, Windows 1.15) app tự chuyển sang Mức 2 cho riêng trang bị chặn và nhớ 7 ngày.</p></div>
+<div class="layer"><span class="state">Mức 1 bật sẵn</span><h4>Vượt chặn nhà mạng</h4><p>Nhà mạng chặn bằng cách đọc tên trang lúc mở kết nối. App chia nhỏ gói đầu tiên để máy soi không đọc được tên — không cần VPN. Mức 2 đảo thêm thứ tự gói, cho khi Mức 1 không còn lọt. Từ bản 2.17 (iPad / iPhone 1.17, Windows 1.15, Mac 1.17) app tự chuyển sang Mức 2 cho riêng trang bị chặn và nhớ 7 ngày.</p></div>
 <div class="layer"><span class="state off">Tắt sẵn</span><h4>Proxy</h4><p>Đi đường vòng qua một máy chủ của bạn. Shadowsocks mã hoá cả đường đi (nên dùng); SOCKS5 không mã hoá. Chỉ dùng khi hai lớp trên không đủ.</p></div>
 </div>
 <figure class="shot">
@@ -413,7 +413,7 @@ table.grid td:last-child,table.grid th:last-child{padding-right:0}
 <ul>
 <li>Đừng tắt DNS mã hoá: gần như không làm chậm (app giữ sẵn kết nối, mỗi lần hỏi khoảng 20–100 ms) và tự lui về DNS của máy khi bị chặn.</li>
 <li>Mức 2 chậm thêm khoảng 10–40 ms mỗi kết nối (Windows khoảng 0,1 giây, cần bản 1.13 trở lên). Đã vào được thì để nguyên Mức 2 cũng được.</li>
-<li>Từ bản 2.17 / iPad 1.17 / Windows 1.15: để Mức 1 là đủ. Trang nào Mức 1 không lọt (mở lần đầu chờ khoảng 4 giây) thì app tự thử lại theo Mức 2 cho riêng trang đó và nhớ 7 ngày — các lần sau mở ngay. Trang mở bằng «http://» (không mã hoá) cũng được chia nhỏ như HTTPS.</li>
+<li>Từ bản 2.17 / iPad 1.17 / Windows 1.15 / Mac 1.17: để Mức 1 là đủ. Trang nào Mức 1 không lọt (mở lần đầu chờ khoảng 4 giây) thì app tự thử lại theo Mức 2 cho riêng trang đó và nhớ 7 ngày — các lần sau mở ngay. Trang mở bằng «http://» (không mã hoá) cũng được chia nhỏ như HTTPS.</li>
 <li>Tắt DNS mã hoá mà vẫn bật Vượt chặn: app vẫn nhận ra khi DNS của nhà mạng trả địa chỉ trang cảnh báo (vd 127.0.0.1) thay cho địa chỉ thật, và tự hỏi lại qua DNS mã hoá.</li>
 <li>Bật cùng lúc cả ba được. Đi qua proxy thì phần đó do proxy lo; vượt chặn vẫn giúp các kết nối đi thẳng (video, ảnh khi chọn «chỉ trang phim»).</li>
 </ul>
