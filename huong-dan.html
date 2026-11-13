@@ -106,6 +106,10 @@ table.grid td:last-child,table.grid th:last-child{padding-right:0}
 .site-foot nav{display:flex;gap:4px 28px;flex-wrap:wrap}
 .site-foot nav a{display:inline-flex;align-items:center;min-height:44px;font-size:15px;text-decoration:none}
 .site-foot p{margin:0;max-width:78ch;font-size:14px;line-height:1.65;color:var(--dim)}
+.to-top{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:max(20px,calc(env(safe-area-inset-bottom) + 16px));z-index:50;width:52px;height:52px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:rgba(23,26,33,.92);border:1px solid var(--line2);color:var(--text);box-shadow:0 10px 30px rgba(0,0,0,.45);text-decoration:none;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);transition:opacity .2s,transform .2s,visibility .2s,background-color .2s}
+.to-top:hover{color:#1A1204;background:var(--accent);border-color:var(--accent)}
+.to-top.is-hidden{opacity:0;visibility:hidden;transform:translateY(12px);pointer-events:none}
+@media (prefers-reduced-motion: reduce){.to-top{transition:none}}
 </style>
 </head>
 <body>
@@ -526,5 +530,20 @@ table.grid td:last-child,table.grid th:last-child{padding-right:0}
 </footer>
 
 </div>
+<a class="to-top" href="#top" aria-label="Về đầu trang" title="Về đầu trang"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"></path><path d="M6 11l6-6 6 6"></path></svg></a>
+<script>
+(function(){
+var b=document.querySelector('.to-top');if(!b)return;
+function u(){b.classList.toggle('is-hidden',window.scrollY<600)}
+u();addEventListener('scroll',u,{passive:true});
+b.addEventListener('click',function(e){
+e.preventDefault();
+var calm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+window.scrollTo({top:0,behavior:calm?'auto':'smooth'});
+if(history.replaceState)history.replaceState(null,'',location.pathname+location.search);
+var t=document.querySelector('header a');if(t)t.focus({preventScroll:true});
+});
+})();
+</script>
 </body>
 </html>
