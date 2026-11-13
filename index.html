@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Côn Bằng TV — phim hay, gọn trong một chiếc remote</title>
-<meta name="description" content="Côn Bằng TV gom phim từ nhiều trang web về một trang chủ, điều khiển bằng remote. Cài trên Android TV bằng app Downloader với mã 9192365. Có bản iPad / iPhone, Windows, Mac và Linux.">
+<meta name="description" content="Côn Bằng TV gom phim từ nhiều trang web về một trang chủ, điều khiển bằng remote. Miễn phí, không tài khoản. Cài trên Android TV bằng app Downloader với mã 9192365; có bản điện thoại Android, iPad / iPhone, Windows, Mac và Linux.">
 <meta name="theme-color" content="#0E1014">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Côn Bằng TV — phim hay, gọn trong một chiếc remote">
-<meta property="og:description" content="Gom phim từ nhiều trang web về một trang chủ, điều khiển bằng remote. Cài trên Android TV bằng mã Downloader 9192365.">
+<meta property="og:description" content="Gom phim từ nhiều trang web về một trang chủ, điều khiển bằng remote. Cài trên Android TV bằng mã Downloader 9192365. Có bản iPad / iPhone, Windows, Mac và Linux.">
 <meta property="og:url" content="https://conbangtv.github.io/">
 <meta property="og:image" content="https://conbangtv.github.io/assets/trang-chu.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -18,245 +18,644 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Côn Bằng TV","url":"https://conbangtv.github.io/","image":"https://conbangtv.github.io/assets/trang-chu.jpg","applicationCategory":"MultimediaApplication","operatingSystem":"Android TV, Android, iOS, iPadOS, Windows, macOS, Linux","inLanguage":"vi","offers":{"@type":"Offer","price":"0","priceCurrency":"VND"},"downloadUrl":"https://github.com/Circling5714/ChimToTV/releases/latest/download/ConBangTV.apk"}
+</script>
 <style>
-:root{--accent:#FFB020}
+:root{--accent:#FFB020;--bg:#0E1014;--surface:#171A21;--text:#F2F4F8;--dim:#9AA3B2;--line:rgba(255,255,255,.14);--edge:rgba(255,255,255,.08)}
 html{scroll-behavior:smooth}
-body{margin:0;background:#0E1014}
-a{color:#9AA3B2}a:hover{color:#F2F4F8}
-a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+body{margin:0;background:var(--bg);color:var(--text);font-family:'Be Vietnam Pro',system-ui,-apple-system,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--dim)}a:hover{color:var(--text)}
+a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
-.to-top{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:max(20px,calc(env(safe-area-inset-bottom) + 16px));z-index:50;width:52px;height:52px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:rgba(23,26,33,.92);border:1px solid rgba(255,255,255,.18);color:#F2F4F8;box-shadow:0 10px 30px rgba(0,0,0,.45);text-decoration:none;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);transition:opacity .2s,transform .2s,visibility .2s,background-color .2s}
+img{max-width:100%}
+strong{color:var(--text);font-weight:600}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em;color:var(--text);background:var(--bg);padding:2px 6px;border-radius:6px;overflow-wrap:anywhere}
+.page{overflow:hidden}
+.wrap{max-width:1120px;margin:0 auto;padding:0 clamp(20px,5vw,40px);box-sizing:border-box}
+.sec{padding-top:clamp(80px,11vw,148px);scroll-margin-top:8px}
+.head{display:flex;flex-direction:column;gap:14px;max-width:700px;margin-bottom:clamp(28px,4vw,44px)}
+.eyebrow{margin:0;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.h2{margin:0;font-size:clamp(32px,4.6vw,56px);line-height:1.1;letter-spacing:-.03em;font-weight:700;text-wrap:balance}
+.h3{margin:0;font-size:clamp(24px,2.6vw,32px);line-height:1.2;letter-spacing:-.02em;font-weight:600;text-wrap:balance}
+.lead{margin:0;font-size:clamp(16px,1.6vw,19px);line-height:1.6;color:var(--dim);text-wrap:pretty}
+.muted{margin:0;font-size:16px;line-height:1.6;color:var(--dim);text-wrap:pretty}
+.small{margin:0;font-size:15px;line-height:1.6;color:var(--dim)}
+.card{background:var(--surface);border:1px solid var(--edge);border-radius:24px;box-sizing:border-box}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr))}
+.feat{padding:30px;display:flex;flex-direction:column;gap:12px}
+.feat svg{color:var(--accent)}
+.feat h3{margin:10px 0 0;font-size:21px;line-height:1.25;letter-spacing:-.015em;font-weight:600}
+.btn{display:inline-flex;align-items:center;min-height:52px;padding:0 30px;border-radius:999px;background:var(--accent);color:#1A1204;font-size:17px;font-weight:600;text-decoration:none;box-sizing:border-box}
+.btn:hover{color:#1A1204;filter:brightness(1.07)}
+.btn-ghost{display:inline-flex;align-items:center;min-height:52px;padding:0 26px;border-radius:999px;border:1px solid rgba(255,255,255,.22);color:var(--text);font-size:17px;font-weight:500;text-decoration:none;box-sizing:border-box}
+.btn-ghost:hover{border-color:var(--text)}
+.alink{display:inline-flex;align-items:center;gap:8px;min-height:44px;color:var(--text);font-size:17px;text-decoration:none}
+.acc{display:inline-flex;align-items:center;min-height:44px;font-size:16px;font-weight:500;text-decoration:none;color:var(--accent)}
+.acc:hover{color:var(--text)}
+.links{display:flex;gap:0 24px;flex-wrap:wrap}
+.steps{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:18px;counter-reset:s}
+.steps li{display:flex;gap:16px;align-items:flex-start;font-size:17px;line-height:1.55;color:var(--dim)}
+.steps li::before{counter-increment:s;content:counter(s);flex:none;width:30px;height:30px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.22);border-radius:50%;font-size:14px;font-weight:600;color:var(--text)}
+.ticks{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px}
+.ticks li{position:relative;padding-left:28px;font-size:16px;line-height:1.6;color:var(--dim)}
+.ticks li::before{content:"";position:absolute;left:2px;top:.42em;width:14px;height:14px;background:var(--accent);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/contain no-repeat}
+.shot{margin:0;padding:clamp(8px,1.2vw,14px);background:#050608;border:1px solid rgba(255,255,255,.12);border-radius:clamp(12px,2vw,20px);box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.shot img{width:100%;height:auto;display:block;border-radius:clamp(6px,1vw,10px)}
+.shot figcaption{padding:12px 4px 2px;font-size:14px;line-height:1.5;color:var(--dim)}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(440px,100%),1fr));gap:clamp(24px,4vw,56px);align-items:center}
+.row+.row{margin-top:clamp(64px,9vw,112px)}
+.row .text{display:flex;flex-direction:column;gap:18px}
+@media (min-width:1000px){.row.flip .shot{order:-1}}
+.digits{display:flex;gap:clamp(6px,1.1vw,12px)}
+.digits span{flex:1;max-width:62px;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;background:var(--bg);border:1px solid rgba(255,255,255,.12);border-radius:14px;font-size:clamp(24px,3.6vw,42px);font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:0 32px;margin-top:clamp(36px,5vw,56px)}
+.facts div{padding:18px 0;border-top:1px solid var(--line)}
+.facts b{display:block;font-size:17px;font-weight:600}
+.facts span{font-size:15px;line-height:1.5;color:var(--dim)}
+.plat{padding:28px;display:flex;flex-direction:column;gap:14px}
+.plat h3{margin:0;font-size:24px;line-height:1.2;letter-spacing:-.02em;font-weight:600}
+.plat .req{margin:0;font-size:15px;line-height:1.55;color:var(--text);opacity:.9}
+.plat .links{margin-top:auto}
+.tag{display:inline-block;padding:3px 10px;border-radius:999px;border:1px solid var(--line);font-size:13px;color:var(--dim);margin:0 6px 6px 0}
+.src{padding:24px;display:flex;flex-direction:column;gap:8px}
+.src h3{margin:0;font-size:19px;font-weight:600;letter-spacing:-.01em}
+.install{padding:clamp(24px,3.4vw,40px);display:flex;flex-direction:column;gap:22px}
+.install h3{margin:0;font-size:26px;letter-spacing:-.02em;font-weight:600}
+.faq{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:44px;padding:20px 0;font-size:clamp(17px,1.7vw,20px);font-weight:600;line-height:1.35}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;font-size:26px;font-weight:400;color:var(--accent);line-height:1}
+.faq details[open] summary::after{content:"−"}
+.faq .ans{padding:0 0 22px;max-width:76ch;display:flex;flex-direction:column;gap:10px}
+.to-top{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:max(20px,calc(env(safe-area-inset-bottom) + 16px));z-index:50;width:52px;height:52px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:rgba(23,26,33,.92);border:1px solid rgba(255,255,255,.18);color:var(--text);box-shadow:0 10px 30px rgba(0,0,0,.45);text-decoration:none;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);transition:opacity .2s,transform .2s,visibility .2s,background-color .2s}
 .to-top:hover{color:#1A1204;background:var(--accent);border-color:var(--accent)}
 .to-top.is-hidden{opacity:0;visibility:hidden;transform:translateY(12px);pointer-events:none}
 @media (prefers-reduced-motion: reduce){.to-top{transition:none}}
 </style>
 </head>
 <body>
-<div id="top" style="width: 100%; background: #0E1014; color: #F2F4F8; font-family: 'Be Vietnam Pro', system-ui, -apple-system, 'Segoe UI', sans-serif; -webkit-font-smoothing: antialiased; overflow: hidden">
+<div id="top" class="page">
 
-<header style="max-width: 1120px; margin: 0 auto; padding: 20px clamp(20px, 5vw, 40px); display: flex; align-items: center; justify-content: space-between; gap: 16px 28px; flex-wrap: wrap; box-sizing: border-box">
-<a href="#top" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: #F2F4F8; min-height: 44px">
+<header class="wrap" style="padding-top: 20px; padding-bottom: 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px 28px; flex-wrap: wrap">
+<a href="#top" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text); min-height: 44px">
 <img src="assets/logo.png" alt="" style="width: 36px; height: 36px; border-radius: 9px; display: block">
 <span style="font-size: 17px; font-weight: 600; letter-spacing: -0.01em">Côn Bằng TV</span>
 </a>
-<nav aria-label="Mục trong trang" style="display: flex; align-items: center; gap: 8px 28px; flex-wrap: wrap">
+<nav aria-label="Mục trong trang" style="display: flex; align-items: center; gap: 4px 24px; flex-wrap: wrap">
 <a href="#cai-dat" style="font-size: 15px; text-decoration: none; padding: 12px 0">Cài đặt</a>
 <a href="#tinh-nang" style="font-size: 15px; text-decoration: none; padding: 12px 0">Tính năng</a>
-<a href="#nen-tang" style="font-size: 15px; text-decoration: none; padding: 12px 0">Nền tảng</a>
+<a href="#nguon-phim" style="font-size: 15px; text-decoration: none; padding: 12px 0">Nguồn phim</a>
+<a href="#nen-tang" style="font-size: 15px; text-decoration: none; padding: 12px 0">Tải về</a>
+<a href="#hoi-dap" style="font-size: 15px; text-decoration: none; padding: 12px 0">Hỏi đáp</a>
 <a href="huong-dan.html" style="font-size: 15px; text-decoration: none; padding: 12px 0">Hướng dẫn</a>
-<a href="https://github.com/Circling5714/ChimToTV" style="font-size: 15px; text-decoration: none; color: #F2F4F8; padding: 11px 18px; border: 1px solid rgba(255,255,255,0.16); border-radius: 999px">GitHub</a>
+<a href="https://github.com/Circling5714/ChimToTV" style="font-size: 15px; text-decoration: none; color: var(--text); padding: 11px 18px; border: 1px solid rgba(255,255,255,0.16); border-radius: 999px">GitHub</a>
 </nav>
 </header>
 
-<section style="max-width: 1120px; margin: 0 auto; padding: clamp(48px, 8vw, 96px) clamp(20px, 5vw, 40px) 0; display: flex; flex-direction: column; align-items: center; gap: 28px; text-align: center; box-sizing: border-box">
-<p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent)">Android TV · iPad · iPhone · Windows</p>
+<!-- Đầu trang -->
+<section class="wrap" style="padding-top: clamp(48px, 8vw, 96px); display: flex; flex-direction: column; align-items: center; gap: 28px; text-align: center">
+<p class="eyebrow" style="text-wrap: balance">Android TV · Điện thoại · iPad · iPhone · Windows · Mac · Linux</p>
 <h1 style="margin: 0; max-width: 14ch; font-size: clamp(40px, 7.2vw, 88px); line-height: 1.06; letter-spacing: -0.035em; font-weight: 700; text-wrap: balance">Phim hay, gọn trong một chiếc remote.</h1>
-<p style="margin: 0; max-width: 46ch; font-size: clamp(17px, 1.9vw, 21px); line-height: 1.6; color: #9AA3B2; text-wrap: pretty">Côn Bằng TV gom phim từ nhiều trang web về một trang chủ, điều khiển bằng mũi tên và OK. Mở tivi là xem.</p>
-<div style="display: flex; align-items: center; justify-content: center; gap: 12px 28px; flex-wrap: wrap; margin-top: 8px">
-<a href="#cai-dat" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 30px; border-radius: 999px; background: var(--accent); color: #1A1204; font-size: 17px; font-weight: 600; text-decoration: none; box-sizing: border-box">Cài trên Android TV</a>
-<a href="https://github.com/Circling5714/ChimToTV" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: #F2F4F8; font-size: 17px; text-decoration: none">Xem trên GitHub
-<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg>
-</a>
+<p class="lead" style="max-width: 50ch; font-size: clamp(17px, 1.9vw, 21px)">Côn Bằng TV gom phim từ nhiều trang web về một trang chủ, điều khiển bằng mũi tên và OK. Phim trùng gộp làm một, video giật thì đổi server bằng một nút, trang bị nhà mạng chặn vẫn vào được. Mở tivi là xem.</p>
+<div style="display: flex; align-items: center; justify-content: center; gap: 12px 16px; flex-wrap: wrap; margin-top: 8px">
+<a href="#cai-dat" class="btn">Cài trên Android TV</a>
+<a href="#nen-tang" class="btn-ghost">Tải cho máy khác</a>
 </div>
 </section>
 
-<div style="max-width: 1040px; margin: clamp(44px, 6vw, 80px) auto 0; padding: 0 clamp(20px, 5vw, 40px); box-sizing: border-box">
+<div class="wrap" style="max-width: 1040px; margin-top: clamp(44px, 6vw, 80px)">
 <div style="padding: 1.2%; background: #050608; border: 1px solid rgba(255,255,255,0.12); border-radius: clamp(12px, 2.2vw, 24px); box-shadow: 0 48px 120px rgba(0,0,0,0.65)">
-<img src="assets/trang-chu.jpg" alt="Trang chủ của Côn Bằng TV trên tivi: menu bên trái, các hàng phim, phim đang chọn có viền vàng" style="width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; display: block; border-radius: clamp(6px, 1.2vw, 12px)">
+<img src="assets/trang-chu.jpg" alt="Trang chủ của Côn Bằng TV trên tivi: menu bên trái, các hàng phim, phim đang chọn có viền vàng" width="1280" height="720" style="width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; display: block; border-radius: clamp(6px, 1.2vw, 12px)">
 </div>
 <div aria-hidden="true" style="width: 22%; height: clamp(6px, 1vw, 12px); margin: 0 auto; background: #050608; border: 1px solid rgba(255,255,255,0.12); border-top: 0; border-radius: 0 0 10px 10px"></div>
+<div class="facts">
+<div><b>Miễn phí</b><span>Không tài khoản, không đăng ký, không quảng cáo của app.</span></div>
+<div><b>Nhiều nguồn một chỗ</b><span>10 trang phim có sẵn, tự gộp phim trùng.</span></div>
+<div><b>Tự cập nhật</b><span>Có bản mới là app tự tải về, cài đè, giữ nguyên lịch sử.</span></div>
+<div><b>Mã nguồn công khai</b><span>Ai cũng xem được app làm gì, trên GitHub.</span></div>
+</div>
 </div>
 
-<section id="cai-dat" style="max-width: 1120px; margin: 0 auto; padding: clamp(80px, 11vw, 148px) clamp(20px, 5vw, 40px) 0; display: flex; flex-direction: column; gap: clamp(28px, 4vw, 44px); box-sizing: border-box">
-<div style="display: flex; flex-direction: column; gap: 14px; max-width: 640px">
-<p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent)">Cài đặt</p>
-<h2 style="margin: 0; font-size: clamp(32px, 4.6vw, 56px); line-height: 1.1; letter-spacing: -0.03em; font-weight: 700">Cài trong ba bước.</h2>
-<p style="margin: 0; font-size: clamp(16px, 1.6vw, 19px); line-height: 1.6; color: #9AA3B2">Không USB, không máy tính. Chỉ cần app Downloader có sẵn trên CH Play của tivi.</p>
+<!-- Cài trên Android TV -->
+<section id="cai-dat" class="wrap sec">
+<div class="head">
+<p class="eyebrow">Cài đặt</p>
+<h2 class="h2">Cài trên tivi trong ba bước.</h2>
+<p class="lead">Không USB, không máy tính. Chỉ cần app Downloader có sẵn trên CH Play của tivi.</p>
 </div>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); gap: 24px; align-items: stretch">
-<div style="padding: clamp(24px, 3.6vw, 44px); background: #171A21; border: 1px solid rgba(255,255,255,0.08); border-radius: 28px; display: flex; flex-direction: column; gap: 28px; box-sizing: border-box">
-<p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #9AA3B2">Mã Downloader</p>
-<div role="img" aria-label="Mã Downloader: 9192365" style="display: flex; gap: clamp(6px, 1.1vw, 12px)">
-<span style="flex: 1; max-width: 62px; aspect-ratio: 3 / 4; display: flex; align-items: center; justify-content: center; background: #0E1014; border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; font-size: clamp(24px, 3.6vw, 42px); font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums">9</span>
-<span style="flex: 1; max-width: 62px; aspect-ratio: 3 / 4; display: flex; align-items: center; justify-content: center; background: #0E1014; border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; font-size: clamp(24px, 3.6vw, 42px); font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums">1</span>
-<span style="flex: 1; max-width: 62px; aspect-ratio: 3 / 4; display: flex; align-items: center; justify-content: center; background: #0E1014; border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; font-size: clamp(24px, 3.6vw, 42px); font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums">9</span>
-<span style="flex: 1; max-width: 62px; aspect-ratio: 3 / 4; display: flex; align-items: center; justify-content: center; background: #0E1014; border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; font-size: clamp(24px, 3.6vw, 42px); font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums">2</span>
-<span style="flex: 1; max-width: 62px; aspect-ratio: 3 / 4; display: flex; align-items: center; justify-content: center; background: #0E1014; border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; font-size: clamp(24px, 3.6vw, 42px); font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums">3</span>
-<span style="flex: 1; max-width: 62px; aspect-ratio: 3 / 4; display: flex; align-items: center; justify-content: center; background: #0E1014; border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; font-size: clamp(24px, 3.6vw, 42px); font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums">6</span>
-<span style="flex: 1; max-width: 62px; aspect-ratio: 3 / 4; display: flex; align-items: center; justify-content: center; background: #0E1014; border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; font-size: clamp(24px, 3.6vw, 42px); font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums">5</span>
-</div>
-<ol style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 18px">
-<li style="display: flex; gap: 16px; align-items: flex-start">
-<span style="flex: none; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.22); border-radius: 50%; font-size: 14px; font-weight: 600; color: #F2F4F8">1</span>
-<span style="font-size: 17px; line-height: 1.55; color: #9AA3B2"><strong style="color: #F2F4F8; font-weight: 600">Cài Downloader.</strong> Trên tivi, mở CH Play và cài app Downloader (của AFTVnews).</span>
-</li>
-<li style="display: flex; gap: 16px; align-items: flex-start">
-<span style="flex: none; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.22); border-radius: 50%; font-size: 14px; font-weight: 600; color: #F2F4F8">2</span>
-<span style="font-size: 17px; line-height: 1.55; color: #9AA3B2"><strong style="color: #F2F4F8; font-weight: 600">Nhập mã.</strong> Mở Downloader, nhập 9192365 rồi bấm Go.</span>
-</li>
-<li style="display: flex; gap: 16px; align-items: flex-start">
-<span style="flex: none; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.22); border-radius: 50%; font-size: 14px; font-weight: 600; color: #F2F4F8">3</span>
-<span style="font-size: 17px; line-height: 1.55; color: #9AA3B2"><strong style="color: #F2F4F8; font-weight: 600">Bấm Install.</strong> Lần đầu tivi hỏi cho phép Downloader cài ứng dụng thì cho phép. Các bản sau app tự cập nhật.</span>
-</li>
+<div class="card" style="padding: clamp(24px, 3.6vw, 44px); border-radius: 28px; display: flex; flex-direction: column; gap: 28px">
+<p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--dim)">Mã Downloader</p>
+<div class="digits" role="img" aria-label="Mã Downloader: 9192365"><span>9</span><span>1</span><span>9</span><span>2</span><span>3</span><span>6</span><span>5</span></div>
+<ol class="steps">
+<li><span><strong>Cài Downloader.</strong> Trên tivi, mở CH Play, tìm và cài app <strong>Downloader</strong> (biểu tượng cam, của AFTVnews).</span></li>
+<li><span><strong>Nhập mã.</strong> Mở Downloader, nhập <strong>9192365</strong> vào ô địa chỉ rồi bấm Go.</span></li>
+<li><span><strong>Bấm Install.</strong> Lần đầu tivi hỏi cho phép Downloader cài ứng dụng thì bật cho phép, rồi bấm Install lại. Các bản sau app tự cập nhật.</span></li>
 </ol>
-<a href="https://github.com/Circling5714/ChimToTV/releases/latest/download/ConBangTV.apk" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: 16px; color: #F2F4F8; text-decoration: none">Hoặc tải thẳng tệp APK
+<a href="https://github.com/Circling5714/ChimToTV/releases/latest/download/ConBangTV.apk" class="alink" style="font-size: 16px">Hoặc tải thẳng tệp APK (khoảng 1,3 MB)
 <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12"></path><path d="M6 11l6 6 6-6"></path><path d="M5 20h14"></path></svg>
 </a>
 </div>
-<figure style="margin: 0; padding: clamp(16px, 2.4vw, 28px); background: #171A21; border: 1px solid rgba(255,255,255,0.08); border-radius: 28px; display: flex; flex-direction: column; justify-content: center; gap: 18px; box-sizing: border-box">
+<figure class="card" style="margin: 0; padding: clamp(16px, 2.4vw, 28px); border-radius: 28px; display: flex; flex-direction: column; justify-content: center; gap: 18px">
 <img src="assets/moi-ban-be.png" alt="Màn «Mời bạn bè cài app» trong Côn Bằng TV: mã Downloader 9192365, ba bước cài và mã QR" style="width: 100%; height: auto; display: block; border: 1px solid rgba(255,255,255,0.10); border-radius: 14px">
-<figcaption style="font-size: 16px; line-height: 1.55; color: #9AA3B2">Nhà đã có app? Mở menu, chọn <strong style="color: #F2F4F8; font-weight: 600">Mời bạn bè cài app</strong>: mã này hiện thật to kèm mã QR để khách chụp mang về.</figcaption>
+<figcaption class="muted">Nhà đã có app? Mở menu, chọn <strong>Mời bạn bè cài app</strong>: mã này hiện thật to kèm mã QR để khách chụp mang về. Bản iPad, Mac, Windows và Linux có cùng màn này trong Cài đặt.</figcaption>
 </figure>
 </div>
-</section>
-
-<section id="tinh-nang" style="max-width: 1120px; margin: 0 auto; padding: clamp(80px, 11vw, 148px) clamp(20px, 5vw, 40px) 0; display: flex; flex-direction: column; gap: clamp(28px, 4vw, 44px); box-sizing: border-box">
-<div style="display: flex; flex-direction: column; gap: 14px; max-width: 640px">
-<p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent)">Tính năng</p>
-<h2 style="margin: 0; font-size: clamp(32px, 4.6vw, 56px); line-height: 1.1; letter-spacing: -0.03em; font-weight: 700; text-wrap: balance">Mọi thứ trong tầm một nút bấm.</h2>
+<div class="grid" style="margin-top: 24px">
+<div class="card feat">
+<h3 style="margin: 0">Tivi không có CH Play?</h3>
+<p class="muted">Tải tệp APK bằng điện thoại hoặc máy tính, gửi sang tivi bằng app <strong>Send Files to TV</strong> hoặc chép qua USB, rồi mở tệp bằng trình quản lý tệp của tivi.</p>
 </div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 20px">
-<div style="min-height: 232px; padding: 32px; background: #171A21; border: 1px solid rgba(255,255,255,0.08); border-radius: 24px; display: flex; flex-direction: column; gap: 14px; box-sizing: border-box">
-<svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent)"><rect x="3" y="4" width="7" height="9" rx="1.5"></rect><rect x="14" y="4" width="7" height="5" rx="1.5"></rect><rect x="14" y="12" width="7" height="8" rx="1.5"></rect><rect x="3" y="16" width="7" height="4" rx="1.5"></rect></svg>
-<h3 style="margin: 12px 0 0; font-size: 22px; line-height: 1.25; letter-spacing: -0.015em; font-weight: 600">Một trang chủ, nhiều nguồn phim</h3>
-<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #9AA3B2">Phim mới từ các trang được gom về một chỗ, phim trùng gộp làm một, xếp theo thứ bạn đang xem dở.</p>
+<div class="card feat">
+<h3 style="margin: 0">Điện thoại Android</h3>
+<p class="muted">Cùng tệp APK đó cài được trên điện thoại: cầm dọc thì menu gọn vào nút ☰, lưới phim 3 cột; xem phim luôn nằm ngang. Cầm ngang hay máy tính bảng thì dùng bố cục như tivi.</p>
 </div>
-<div style="min-height: 232px; padding: 32px; background: #171A21; border: 1px solid rgba(255,255,255,0.08); border-radius: 24px; display: flex; flex-direction: column; gap: 14px; box-sizing: border-box">
-<svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent)"><rect x="7" y="2.5" width="10" height="19" rx="3"></rect><circle cx="12" cy="8" r="2.4"></circle><path d="M10.5 14h3"></path><path d="M10.5 17h3"></path></svg>
-<h3 style="margin: 12px 0 0; font-size: 22px; line-height: 1.25; letter-spacing: -0.015em; font-weight: 600">Sinh ra cho remote</h3>
-<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #9AA3B2">Mũi tên để đi, OK để chọn, giữ phím để tua nhanh dần. Bàn phím và chuột bay cũng dùng được.</p>
-</div>
-<div style="min-height: 232px; padding: 32px; background: #171A21; border: 1px solid rgba(255,255,255,0.08); border-radius: 24px; display: flex; flex-direction: column; gap: 14px; box-sizing: border-box">
-<svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent)"><path d="M12 3l7 3v5.5c0 4.2-2.8 7.6-7 9.5-4.2-1.900-7-5.300-7-9.500V6l7-3z"></path><path d="M9 12l2.200 2.200L15 10.400"></path></svg>
-<h3 style="margin: 12px 0 0; font-size: 22px; line-height: 1.25; letter-spacing: -0.015em; font-weight: 600">Vào được cả khi bị chặn</h3>
-<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #9AA3B2">Vượt chặn nhà mạng và DNS mã hoá bật sẵn. Không cần VPN.</p>
-</div>
-<div style="min-height: 232px; padding: 32px; background: #171A21; border: 1px solid rgba(255,255,255,0.08); border-radius: 24px; display: flex; flex-direction: column; gap: 14px; box-sizing: border-box">
-<svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent)"><circle cx="9" cy="8" r="3.2"></circle><path d="M3 20c0-3.300 2.700-5.500 6-5.500s6 2.200 6 5.500"></path><circle cx="17.500" cy="9" r="2.400"></circle><path d="M16.500 14.600c2.600.300 4.500 2.200 4.500 5.400"></path></svg>
-<h3 style="margin: 12px 0 0; font-size: 22px; line-height: 1.25; letter-spacing: -0.015em; font-weight: 600">Mỗi người một hồ sơ</h3>
-<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #9AA3B2">Lịch sử riêng, khoá bằng mã PIN, giới hạn giờ xem cho trẻ.</p>
-</div>
-<div style="min-height: 232px; padding: 32px; background: #171A21; border: 1px solid rgba(255,255,255,0.08); border-radius: 24px; display: flex; flex-direction: column; gap: 14px; box-sizing: border-box">
-<svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent)"><path d="M4 9a8 8 0 0 1 14-3.500L20 8"></path><path d="M20 4v4h-4"></path><path d="M20 15a8 8 0 0 1-14 3.500L4 16"></path><path d="M4 20v-4h4"></path></svg>
-<h3 style="margin: 12px 0 0; font-size: 22px; line-height: 1.25; letter-spacing: -0.015em; font-weight: 600">Xem dở ở tivi, xem tiếp trên iPad</h3>
-<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #9AA3B2">Các máy trong nhà tự đồng bộ với nhau, không qua máy chủ nào.</p>
-</div>
-<div style="min-height: 232px; padding: 32px; background: #171A21; border: 1px solid rgba(255,255,255,0.08); border-radius: 24px; display: flex; flex-direction: column; gap: 14px; box-sizing: border-box">
-<svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent)"><path d="M12 3v11"></path><path d="M7.500 10l4.500 4.500 4.500-4.500"></path><path d="M4 17v2.500h16V17"></path></svg>
-<h3 style="margin: 12px 0 0; font-size: 22px; line-height: 1.25; letter-spacing: -0.015em; font-weight: 600">Tự cập nhật</h3>
-<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #9AA3B2">Có bản mới là app tự tải về và hỏi cài. Không phải tìm tệp, không phải cắm USB.</p>
-</div>
-</div>
-<a href="huong-dan.html" style="display: inline-flex; align-items: center; gap: 8px; align-self: flex-start; min-height: 44px; color: #F2F4F8; font-size: 17px; text-decoration: none">Xem hướng dẫn sử dụng chi tiết
-<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg>
-</a>
-</section>
-
-<section id="nen-tang" style="max-width: 1120px; margin: 0 auto; padding: clamp(80px, 11vw, 148px) clamp(20px, 5vw, 40px) 0; display: flex; flex-direction: column; gap: clamp(28px, 4vw, 44px); box-sizing: border-box">
-<div style="display: flex; flex-direction: column; gap: 14px; max-width: 640px">
-<p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent)">Nền tảng</p>
-<h2 style="margin: 0; font-size: clamp(32px, 4.6vw, 56px); line-height: 1.1; letter-spacing: -0.03em; font-weight: 700; text-wrap: balance">Cùng một app, năm màn hình.</h2>
-</div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 0 40px">
-<div style="padding: 28px 0 32px; border-top: 1px solid rgba(255,255,255,0.14); display: flex; flex-direction: column; gap: 10px">
-<h3 style="margin: 0; font-size: 26px; line-height: 1.2; letter-spacing: -0.02em; font-weight: 600">Android TV</h3>
-<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #9AA3B2">Tivi và TV box chạy Android 5.0 trở lên.</p>
-<div style="display: flex; gap: 0 24px; flex-wrap: wrap">
-<a href="#cai-dat" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 16px; font-weight: 500; text-decoration: none; color: var(--accent)">Cài bằng mã 9192365</a>
-<a href="https://github.com/Circling5714/ChimToTV/releases/latest/download/ConBangTV.apk" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 16px; font-weight: 500; text-decoration: none; color: var(--accent)">Tải tệp APK</a>
-</div>
-</div>
-<div style="padding: 28px 0 32px; border-top: 1px solid rgba(255,255,255,0.14); display: flex; flex-direction: column; gap: 10px">
-<h3 style="margin: 0; font-size: 26px; line-height: 1.2; letter-spacing: -0.02em; font-weight: 600">iPad và iPhone</h3>
-<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #9AA3B2">iOS / iPadOS 15 trở lên, cài bằng TrollStore.</p>
-<a href="https://github.com/Circling5714/ChimToTV/releases/download/conbangtv_ios/ConBangTV-iPad.ipa" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 16px; font-weight: 500; text-decoration: none; color: var(--accent)">Tải bản iPad / iPhone</a>
-</div>
-<div style="padding: 28px 0 32px; border-top: 1px solid rgba(255,255,255,0.14); display: flex; flex-direction: column; gap: 10px">
-<h3 style="margin: 0; font-size: 26px; line-height: 1.2; letter-spacing: -0.02em; font-weight: 600">Windows</h3>
-<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #9AA3B2">Windows 10 và 11. Một tệp .exe, mở là chạy.</p>
-<a href="https://github.com/Circling5714/ChimToTV/releases/download/conbangtv_windows/ConBangTV-Windows.exe" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 16px; font-weight: 500; text-decoration: none; color: var(--accent)">Tải bản Windows</a>
-</div>
-<div style="padding: 28px 0 32px; border-top: 1px solid rgba(255,255,255,0.14); display: flex; flex-direction: column; gap: 10px">
-<h3 style="margin: 0; font-size: 26px; line-height: 1.2; letter-spacing: -0.02em; font-weight: 600">Mac</h3>
-<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #9AA3B2">macOS 12 trở lên, máy Intel và chip Apple.</p>
-<div style="display: flex; gap: 0 24px; flex-wrap: wrap">
-<a href="https://github.com/Circling5714/ChimToTV/releases/download/conbangtv_macos/ConBangTV-Mac.zip" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 16px; font-weight: 500; text-decoration: none; color: var(--accent)">Tải bản Mac</a>
-<a href="#cai-mac" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 16px; font-weight: 500; text-decoration: none; color: var(--accent)">Cách cài trên Mac</a>
-</div>
-</div>
-<div style="padding: 28px 0 32px; border-top: 1px solid rgba(255,255,255,0.14); display: flex; flex-direction: column; gap: 10px">
-<h3 style="margin: 0; font-size: 26px; line-height: 1.2; letter-spacing: -0.02em; font-weight: 600">Linux</h3>
-<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #9AA3B2">Ubuntu 22.04 trở lên, Linux Mint 21, Debian 12 (máy 64-bit). Bấm đúp tệp .deb để cài, sau đó app tự cập nhật.</p>
-<a href="https://github.com/Circling5714/ChimToTV/releases/download/conbangtv_linux/ConBangTV-Linux.deb" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 16px; font-weight: 500; text-decoration: none; color: var(--accent)">Tải bản Linux</a>
+<div class="card feat">
+<h3 style="margin: 0">Cần gì trên tivi</h3>
+<p class="muted">Tivi hoặc TV box chạy <strong>Android 5.0 trở lên</strong> (Android TV, Google TV, box Android thường). Dùng remote, chuột bay, bàn phím hay màn hình cảm ứng đều được.</p>
 </div>
 </div>
 </section>
 
-<section id="cai-mac" style="max-width: 1120px; margin: 0 auto; padding: clamp(80px, 11vw, 148px) clamp(20px, 5vw, 40px) 0; display: flex; flex-direction: column; gap: clamp(28px, 4vw, 44px); box-sizing: border-box">
-<div style="display: flex; flex-direction: column; gap: 14px; max-width: 680px">
-<p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent)">Cài trên Mac</p>
-<h2 style="margin: 0; font-size: clamp(32px, 4.6vw, 56px); line-height: 1.1; letter-spacing: -0.03em; font-weight: 700; text-wrap: balance">Mở lần đầu trên Mac.</h2>
-<p style="margin: 0; font-size: clamp(16px, 1.6vw, 19px); line-height: 1.6; color: #9AA3B2">Côn Bằng TV không mua chứng chỉ của Apple nên macOS chặn ở lần mở đầu tiên. Cho phép một lần là xong — các bản sau app tự cập nhật.</p>
+<!-- Tính năng tóm tắt -->
+<section id="tinh-nang" class="wrap sec">
+<div class="head">
+<p class="eyebrow">Tính năng</p>
+<h2 class="h2">Mọi thứ trong tầm một nút bấm.</h2>
+<p class="lead">Không phải mở từng trang web, không phải dò quảng cáo. App đọc thẳng danh sách phim, tập và server từ các trang rồi bày lên một màn hình dễ bấm.</p>
 </div>
-<div style="padding: clamp(24px, 3.6vw, 44px); background: #171A21; border: 1px solid rgba(255,255,255,0.08); border-radius: 28px; display: flex; flex-direction: column; gap: 24px; box-sizing: border-box">
-<ol style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 18px">
-<li style="display: flex; gap: 16px; align-items: flex-start">
-<span style="flex: none; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.22); border-radius: 50%; font-size: 14px; font-weight: 600; color: #F2F4F8">1</span>
-<span style="font-size: 17px; line-height: 1.55; color: #9AA3B2"><strong style="color: #F2F4F8; font-weight: 600">Tải bản Mac.</strong> Tải tệp <a href="https://github.com/Circling5714/ChimToTV/releases/download/conbangtv_macos/ConBangTV-Mac.zip" style="color: var(--accent); text-decoration: none">ConBangTV-Mac.zip</a> — macOS 12 trở lên, máy Intel hoặc chip Apple.</span>
-</li>
-<li style="display: flex; gap: 16px; align-items: flex-start">
-<span style="flex: none; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.22); border-radius: 50%; font-size: 14px; font-weight: 600; color: #F2F4F8">2</span>
-<span style="font-size: 17px; line-height: 1.55; color: #9AA3B2"><strong style="color: #F2F4F8; font-weight: 600">Giải nén, kéo vào Ứng dụng.</strong> Mở tệp .zip trong thư mục Tải về, kéo <strong style="color: #F2F4F8; font-weight: 600">ConBangTV</strong> vào thư mục Ứng dụng (Applications) rồi mở app.</span>
-</li>
-<li style="display: flex; gap: 16px; align-items: flex-start">
-<span style="flex: none; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.22); border-radius: 50%; font-size: 14px; font-weight: 600; color: #F2F4F8">3</span>
-<span style="font-size: 17px; line-height: 1.55; color: #9AA3B2"><strong style="color: #F2F4F8; font-weight: 600">Bấm OK.</strong> Lần đầu macOS báo «Không thể mở "ConBangTV" vì ứng dụng này đến từ một nhà phát triển chưa được xác định».</span>
-</li>
-<li style="display: flex; gap: 16px; align-items: flex-start">
-<span style="flex: none; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.22); border-radius: 50%; font-size: 14px; font-weight: 600; color: #F2F4F8">4</span>
-<span style="font-size: 17px; line-height: 1.55; color: #9AA3B2"><strong style="color: #F2F4F8; font-weight: 600">Bấm Vẫn mở.</strong> Vào Cài đặt hệ thống → Quyền riêng tư &amp; Bảo mật, kéo xuống mục Bảo mật, bấm <strong style="color: #F2F4F8; font-weight: 600">Vẫn mở</strong> cạnh dòng «"ConBangTV" đã bị chặn…», rồi nhập mật khẩu máy.</span>
-</li>
-<li style="display: flex; gap: 16px; align-items: flex-start">
-<span style="flex: none; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.22); border-radius: 50%; font-size: 14px; font-weight: 600; color: #F2F4F8">5</span>
-<span style="font-size: 17px; line-height: 1.55; color: #9AA3B2"><strong style="color: #F2F4F8; font-weight: 600">Bấm Mở.</strong> Chỉ làm một lần. Các bản sau app tự tìm, tự tải và tự thay bản mới.</span>
-</li>
+<div class="grid">
+<div class="card feat">
+<svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="7" height="9" rx="1.5"></rect><rect x="14" y="4" width="7" height="5" rx="1.5"></rect><rect x="14" y="12" width="7" height="8" rx="1.5"></rect><rect x="3" y="16" width="7" height="4" rx="1.5"></rect></svg>
+<h3>Một trang chủ, nhiều nguồn phim</h3>
+<p class="muted">Phim mới từ các trang được gom về một chỗ, phim trùng gộp làm một, xếp theo thứ bạn đang xem dở.</p>
+</div>
+<div class="card feat">
+<svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2.5" width="10" height="19" rx="3"></rect><circle cx="12" cy="8" r="2.4"></circle><path d="M10.5 14h3"></path><path d="M10.5 17h3"></path></svg>
+<h3>Sinh ra cho remote</h3>
+<p class="muted">Mũi tên để đi, OK để chọn, giữ phím để tua nhanh dần. Bàn phím, chuột bay và màn hình cảm ứng cũng dùng được.</p>
+</div>
+<div class="card feat">
+<svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h11"></path><path d="M4 12h8"></path><path d="M4 17h11"></path><path d="M17 9l3 3-3 3"></path></svg>
+<h3>Giật thì đổi server ngay</h3>
+<p class="muted">Nhấn ▼ khi đang xem: mọi server hiện ra kèm điểm của lần xem trước («mượt», «hay giật, mở 19 s»), xem tiếp đúng giây đang dừng.</p>
+</div>
+<div class="card feat">
+<svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5.5c0 4.2-2.8 7.6-7 9.5-4.2-1.9-7-5.3-7-9.5V6l7-3z"></path><path d="M9 12l2.2 2.2L15 10.4"></path></svg>
+<h3>Vào được cả khi bị chặn</h3>
+<p class="muted">Vượt chặn nhà mạng và DNS mã hoá bật sẵn. Không cần VPN. Có thêm proxy SOCKS5 / Shadowsocks cho ai cần.</p>
+</div>
+<div class="card feat">
+<svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9a6 6 0 0 1 12 0c0 6 2.5 7.5 2.5 7.5h-17S6 15 6 9z"></path><path d="M10 20a2 2 0 0 0 4 0"></path></svg>
+<h3>Có tập mới là biết</h3>
+<p class="muted">Bấm Theo dõi một lần. Tập mới hiện ở đầu trang chủ kèm số tập mới, ở trang nào ra trước cũng thấy.</p>
+</div>
+<div class="card feat">
+<svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.5"></circle><path d="M20 20l-4.2-4.2"></path></svg>
+<h3>Một ô tìm cho mọi trang</h3>
+<p class="muted">Gõ tên phim, có dấu hay không dấu đều được. App hỏi cùng lúc mọi trang, trang nào trả lời trước hiện trước.</p>
+</div>
+<div class="card feat">
+<svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"></circle><path d="M3 20c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5"></path><circle cx="17.5" cy="9" r="2.4"></circle><path d="M16.5 14.6c2.6.3 4.5 2.2 4.5 5.4"></path></svg>
+<h3>Mỗi người một hồ sơ</h3>
+<p class="muted">Lịch sử riêng, khoá bằng mã PIN, hồ sơ trẻ em chỉ có hoạt hình hợp tuổi, giới hạn giờ xem và giờ đi ngủ.</p>
+</div>
+<div class="card feat">
+<svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9a8 8 0 0 1 14-3.5L20 8"></path><path d="M20 4v4h-4"></path><path d="M20 15a8 8 0 0 1-14 3.5L4 16"></path><path d="M4 20v-4h4"></path></svg>
+<h3>Xem dở ở tivi, xem tiếp trên iPad</h3>
+<p class="muted">Các máy trong nhà tự đồng bộ lịch sử, chỗ đang xem và phim theo dõi với nhau, không qua máy chủ nào.</p>
+</div>
+<div class="card feat">
+<svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8-4.3-4.1 5.9-.9z"></path></svg>
+<h3>Điểm IMDb ngay trên ảnh phim</h3>
+<p class="muted">Nhãn điểm IMDb trên từng phim, mục «Điểm IMDb cao» và nút xếp theo điểm để chọn phim nhanh hơn.</p>
+</div>
+</div>
+</section>
+
+<!-- Tính năng chi tiết -->
+<section id="xem-ky" class="wrap sec" aria-label="Tính năng chi tiết">
+<div class="row">
+<div class="text">
+<p class="eyebrow">Trang chủ</p>
+<h3 class="h3">Mở app là thấy đúng phim mình hay xem.</h3>
+<ul class="ticks">
+<li>Hàng <strong>Có tập mới</strong> và <strong>Xem tiếp</strong> luôn ở đầu: OK là phát tiếp đúng chỗ.</li>
+<li>Hàng gợi ý <strong>Giống «phim vừa xem»</strong>, theo thể loại bạn hay xem, thuyết minh / lồng tiếng mới.</li>
+<li>Phim có ở nhiều trang chỉ hiện một lần, ghi «3 nguồn»; vào phim là chọn được nguồn.</li>
+<li>Nhấn phím Menu trên một hàng để ẩn hoặc đổi chỗ hàng đó; tự thêm hàng theo loại phim, nước, thể loại, ngôn ngữ.</li>
+<li>Trang nào chậm hay lỗi thì dùng bản đã lưu, không bắt cả trang chủ chờ.</li>
+</ul>
+<a class="acc" href="huong-dan.html#trang-chu">Cách tuỳ chỉnh trang chủ →</a>
+</div>
+<figure class="shot"><img src="assets/hd/trang-chu-sua-nhanh.jpg" alt="Trang chủ trên tivi đang mở hộp sửa nhanh một hàng: ẩn hàng, chuyển lên, chuyển xuống" width="1280" height="720" loading="lazy"></figure>
+</div>
+
+<div class="row flip">
+<div class="text">
+<p class="eyebrow">Xem phim</p>
+<h3 class="h3">Đừng chờ phim tải: nhấn ▼.</h3>
+<ul class="ticks">
+<li>Bảng chọn hiện mọi server của tập kèm điểm app tự chấm từ các lần xem trước — biết ngay server nào mượt.</li>
+<li>Trang phim hỏng trình phát? App tự tìm cùng tập trên <strong>KKPhim</strong> và <strong>NguonC</strong> để xem tạm (server dự phòng).</li>
+<li>Đánh dấu nhạc mở đầu một lần, các tập sau tự bỏ qua.</li>
+<li>Tốc độ 0,75–2×, vừa / lấp đầy màn hình, hẹn giờ tắt, tự chuyển tập sau.</li>
+<li><strong>Thu nhỏ vào góc</strong>: phim chạy tiếp ở góc màn hình trong lúc chọn phim khác.</li>
+</ul>
+<a class="acc" href="huong-dan.html#xem-phim">Các nút khi xem phim →</a>
+</div>
+<figure class="shot"><img src="assets/hd/xem-phim-menu.jpg" alt="Bảng chọn khi xem phim trên tivi: danh sách server, server Thuyết minh 1080 V1 ghi «hay giật, mở 19 s», nút tập trước, tập sau, thu nhỏ vào góc, tốc độ, nhạc mở đầu" width="1280" height="720" loading="lazy"></figure>
+</div>
+
+<div class="row">
+<div class="text">
+<p class="eyebrow">Theo dõi phim</p>
+<h3 class="h3">Bấm theo dõi một lần, có tập mới là biết.</h3>
+<ul class="ticks">
+<li>Trang phim có <strong>Xem tiếp</strong>, <strong>Xem từ tập 1</strong>, <strong>Mới nhất</strong> và danh sách tập — tập đã xem có màu riêng.</li>
+<li>Phim đang theo dõi có tập mới ở bất kỳ trang nào là lên hàng «Có tập mới», ghi rõ «+2».</li>
+<li>Dưới danh sách tập: <strong>Cùng bộ</strong> (các phần khác của phim) và <strong>Cùng thể loại</strong>.</li>
+<li>Phim lẻ và phim bộ dài có điểm IMDb để so trước khi xem.</li>
+</ul>
+<a class="acc" href="huong-dan.html#theo-doi">Theo dõi phim →</a>
+</div>
+<figure class="shot"><img src="assets/hd/theo-doi.jpg" alt="Trang chi tiết phim trên tivi: ảnh phim, thông tin, nút Xem từ tập 1, Nguồn, Liên quan, Theo dõi, danh sách tập và hàng Cùng bộ" width="1280" height="720" loading="lazy"></figure>
+</div>
+
+<div class="row flip">
+<div class="text">
+<p class="eyebrow">Tìm kiếm</p>
+<h3 class="h3">Một ô tìm cho mọi trang phim.</h3>
+<ul class="ticks">
+<li>Gõ «tien nghich» hay «Tiên Nghịch» đều ra; gõ bằng remote, bàn phím hay giọng nói của tivi.</li>
+<li>Kết quả chia theo từng trang, trang nào trả lời trước hiện trước — không chờ trang chậm.</li>
+<li>Thể loại… / Quốc gia… để lọc theo danh sách đầy đủ của trang.</li>
+</ul>
+<a class="acc" href="huong-dan.html#tim-kiem">Mẹo tìm kiếm →</a>
+</div>
+<figure class="shot"><img src="assets/hd/tim-kiem.jpg" alt="Màn tìm kiếm trên tivi: kết quả chia theo từng trang phim" width="1280" height="720" loading="lazy"></figure>
+</div>
+
+<div class="row">
+<div class="text">
+<p class="eyebrow">Người xem và trẻ em</p>
+<h3 class="h3">Mỗi người một hồ sơ, trẻ em có chế độ riêng.</h3>
+<ul class="ticks">
+<li>Tối đa 8 người xem, mỗi người một lịch sử, Xem tiếp, phim theo dõi và trang chủ riêng; mở app hỏi «Ai đang xem?».</li>
+<li>Khoá từng người bằng mã PIN 4 số.</li>
+<li><strong>Hồ sơ trẻ em</strong>: trang chủ chỉ có hoạt hình hợp tuổi, bỏ phim kinh dị, hình sự, 18+.</li>
+<li><strong>Giới hạn giờ xem</strong> mỗi ngày và <strong>giờ đi ngủ</strong>, đặt bằng mã PIN phụ huynh; hết giờ thì người lớn nhập mã để cho xem thêm.</li>
+</ul>
+<a class="acc" href="huong-dan.html#nguoi-xem">Đặt người xem và giới hạn giờ →</a>
+</div>
+<figure class="shot"><img src="assets/hd/cai-dat-nguoi-xem.jpg" alt="Cài đặt người xem trên tivi: danh sách người xem, khoá mã PIN, giới hạn giờ xem" width="1280" height="720" loading="lazy"></figure>
+</div>
+
+<div class="row flip">
+<div class="text">
+<p class="eyebrow">Mạng</p>
+<h3 class="h3">Trang bị chặn vẫn vào được — không cần VPN.</h3>
+<ul class="ticks">
+<li><strong>Vượt chặn nhà mạng</strong> bật sẵn: chia nhỏ gói đầu tiên để máy soi của nhà mạng không đọc được tên trang; trang nào vẫn không lọt thì app tự lên Mức 2 cho riêng trang đó.</li>
+<li><strong>DNS mã hoá</strong> (DoH / DoT) bật sẵn: nhà mạng không đổi được địa chỉ trang, lần lượt NextDNS → Cloudflare → Google.</li>
+<li><strong>Proxy SOCKS5 / Shadowsocks</strong> nếu bạn có máy chủ riêng; dán link <code>ss://</code> là tự điền.</li>
+<li>Trang đổi tên miền thì app tự đổi theo khi trang báo chuyển.</li>
+</ul>
+<a class="acc" href="huong-dan.html#mang">Khi trang không vào được →</a>
+</div>
+<figure class="shot"><img src="assets/hd/cai-dat-mang.jpg" alt="Cài đặt mạng trên tivi: DNS mã hoá, vượt chặn nhà mạng mức 1 và 2, proxy" width="1280" height="720" loading="lazy"></figure>
+</div>
+</section>
+
+<!-- Nguồn phim -->
+<section id="nguon-phim" class="wrap sec">
+<div class="head">
+<p class="eyebrow">Nguồn phim</p>
+<h2 class="h2">Mười trang có sẵn, thêm trang khác cũng được.</h2>
+<p class="lead">App đọc phim từ các trang công khai dưới đây. Mở <strong>Đổi trang phim</strong> là app đo ngay từng trang: mở mất bao lâu, có bao nhiêu phim, trang nhanh nhất có dấu ★.</p>
+</div>
+<div class="grid">
+<div class="card src">
+<h3>yanhh3d · hoathinh3d · hhkungfu</h3>
+<p class="muted">Hoạt hình 3D Trung Quốc: tiên hiệp, kiếm hiệp, tu tiên. Vietsub và thuyết minh, nhiều phim có bản 4K. Có lịch chiếu theo ngày.</p>
+</div>
+<div class="card src">
+<h3>phimmois.fun</h3>
+<p class="muted">Phim bộ, phim lẻ Hàn, Trung, Âu Mỹ, Nhật, Thái và hoạt hình. Vietsub, thuyết minh, lồng tiếng, song ngữ có phụ đề.</p>
+</div>
+<div class="card src">
+<h3>KKPhim · mephim</h3>
+<p class="muted">Kho phim lớn đủ thể loại, phim chiếu rạp, TV Shows. Video app tự phát và tự bỏ quảng cáo chèn trong phim.</p>
+</div>
+<div class="card src">
+<h3>NguonC</h3>
+<p class="muted">Khoảng 33 000 phim, hay có tập mới sớm. Lọc theo thể loại, quốc gia, thuyết minh, lồng tiếng.</p>
+</div>
+<div class="card src">
+<h3>VSMOV</h3>
+<p class="muted">Mạnh phim lồng tiếng, thuyết minh và bản 4K.</p>
+</div>
+<div class="card src">
+<h3>CLB Phim Xưa</h3>
+<p class="muted">Phim Hồng Kông, TVB, kiếm hiệp cũ — chọn theo thể loại hoặc thập niên.</p>
+</div>
+</div>
+<div class="grid" style="margin-top: 24px">
+<div style="padding: 22px 0; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: 8px">
+<p style="margin: 0; font-size: 17px; font-weight: 600">Server dự phòng</p>
+<p class="muted">Trình phát của trang hỏng? App tìm cùng phim, cùng tập trên KKPhim và NguonC rồi thêm vào bảng server.</p>
+</div>
+<div style="padding: 22px 0; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: 8px">
+<p style="margin: 0; font-size: 17px; font-weight: 600">Trang đổi tên miền</p>
+<p class="muted">App tự đổi theo khi trang báo chuyển nhà; hoặc gõ tên miền mới ở <strong>Đổi trang phim → Thêm trang khác</strong>.</p>
+</div>
+<div style="padding: 22px 0; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: 8px">
+<p style="margin: 0; font-size: 17px; font-weight: 600">Trang cùng kiểu</p>
+<p class="muted">App nhận trang theo mẫu giao diện, nên trang khác cùng kiểu thường chạy luôn khi thêm vào danh sách.</p>
+</div>
+</div>
+<p class="small" style="margin-top: 20px">Côn Bằng TV không liên kết với các trang trên và không lưu trữ phim — xem <a href="#rieng-tu">Quyền riêng tư</a> và dòng miễn trừ cuối trang.</p>
+</section>
+
+<!-- Nền tảng / tải về -->
+<section id="nen-tang" class="wrap sec">
+<div class="head">
+<p class="eyebrow">Tải về</p>
+<h2 class="h2">Máy nào trong nhà cũng cài được.</h2>
+<p class="lead">Tivi phòng khách, iPad trong phòng ngủ, máy tính ở bàn làm việc — cùng cách dùng, cùng tính năng. Tắt tivi ở tập 12 phút 18, mở iPad là xem tiếp đúng phút đó. Mọi link dưới đây luôn tải bản mới nhất.</p>
+</div>
+<div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(min(330px, 100%), 1fr))">
+<div class="card plat">
+<h3>Android TV và TV box</h3>
+<p class="req">Android 5.0 trở lên · tệp APK khoảng 1,3 MB</p>
+<ul class="ticks">
+<li>Điều khiển trọn bằng remote; có con trỏ ảo khi cần bấm vào trang web.</li>
+<li>Thu nhỏ phim vào góc, hình trong hình.</li>
+</ul>
+<div class="links">
+<a class="acc" href="#cai-dat">Cài bằng mã 9192365</a>
+<a class="acc" href="https://github.com/Circling5714/ChimToTV/releases/latest/download/ConBangTV.apk">Tải tệp APK</a>
+</div>
+</div>
+<div class="card plat">
+<h3>Điện thoại Android</h3>
+<p class="req">Android 5.0 trở lên · cùng tệp APK với tivi</p>
+<ul class="ticks">
+<li>Cầm dọc hay ngang đều dùng tốt; cầm dọc thì menu gọn vào nút ☰.</li>
+<li>Xem phim luôn nằm ngang, vuốt mép màn để hiện thanh điều hướng.</li>
+</ul>
+<div class="links">
+<a class="acc" href="https://github.com/Circling5714/ChimToTV/releases/latest/download/ConBangTV.apk">Tải tệp APK</a>
+</div>
+</div>
+<div class="card plat">
+<h3>iPad và iPhone</h3>
+<p class="req">iOS / iPadOS 15 trở lên · cài bằng TrollStore · khoảng 4,5 MB</p>
+<ul class="ticks">
+<li>Widget «Xem tiếp», hình trong hình, vuốt để tua và chỉnh độ sáng.</li>
+<li>Điều khiển bằng màn hình khoá, AirPods; dùng được bàn phím rời.</li>
+</ul>
+<div class="links">
+<a class="acc" href="https://github.com/Circling5714/ChimToTV/releases/download/conbangtv_ios/ConBangTV-iPad.ipa">Tải bản iPad / iPhone</a>
+<a class="acc" href="#cai-ipad">Cách cài</a>
+</div>
+</div>
+<div class="card plat">
+<h3>Windows</h3>
+<p class="req">Windows 10 và 11 · một tệp .exe khoảng 70 MB, mở là chạy</p>
+<ul class="ticks">
+<li>Chuột hoặc bàn phím / remote; cỡ giao diện tới 175% cho máy cắm tivi.</li>
+<li>Cửa sổ phim nhỏ luôn nổi ở góc màn hình.</li>
+</ul>
+<div class="links">
+<a class="acc" href="https://github.com/Circling5714/ChimToTV/releases/download/conbangtv_windows/ConBangTV-Windows.exe">Tải bản Windows</a>
+<a class="acc" href="#cai-windows">Cách cài</a>
+</div>
+</div>
+<div class="card plat">
+<h3>Mac</h3>
+<p class="req">macOS 12 trở lên · máy Intel và chip Apple · khoảng 8 MB</p>
+<ul class="ticks">
+<li>Giao diện như bản iPad, menu tiếng Việt; chuột, bàn di chuột, phím tắt.</li>
+<li>Tự cập nhật khi để trong thư mục Ứng dụng.</li>
+</ul>
+<div class="links">
+<a class="acc" href="https://github.com/Circling5714/ChimToTV/releases/download/conbangtv_macos/ConBangTV-Mac.zip">Tải bản Mac</a>
+<a class="acc" href="#cai-mac">Cách cài</a>
+</div>
+</div>
+<div class="card plat">
+<h3>Linux</h3>
+<p class="req">Ubuntu 22.04+, Linux Mint 21+, Debian 12+ (64-bit) · tệp .deb khoảng 5,4 MB</p>
+<ul class="ticks">
+<li>Giao diện và phím như bản Windows, có cửa sổ phim nhỏ.</li>
+<li>Cài một lần bằng App Center, sau đó app tự cập nhật.</li>
+</ul>
+<div class="links">
+<a class="acc" href="https://github.com/Circling5714/ChimToTV/releases/download/conbangtv_linux/ConBangTV-Linux.deb">Tải bản Linux</a>
+<a class="acc" href="#cai-linux">Cách cài</a>
+</div>
+</div>
+</div>
+<figure class="shot" style="margin-top: clamp(32px, 5vw, 56px)">
+<img src="assets/may-tinh-cua-so-nho.jpg" alt="Côn Bằng TV trên máy tính: trang chủ với hàng Có tập mới và Xem tiếp, một tập phim đang chạy trong cửa sổ phim nhỏ có nút dừng, phóng to, tắt" width="1214" height="768" loading="lazy">
+<figcaption>Bản máy tính: phim chạy tiếp trong cửa sổ nhỏ (nút «▣ Thu nhỏ» hoặc phím W) trong lúc chọn phim khác.</figcaption>
+</figure>
+<p class="small" style="margin-top: 20px">Các bản cũ và ghi chú từng bản: <a href="https://github.com/Circling5714/ChimToTV/releases">trang phát hành trên GitHub</a> · <a href="https://github.com/Circling5714/ChimToTV/blob/main/CHANGELOG.md">nhật ký phiên bản</a>.</p>
+</section>
+
+<!-- Cài trên máy khác -->
+<section id="cai-may-khac" class="wrap sec">
+<div class="head">
+<p class="eyebrow">Cài trên máy khác</p>
+<h2 class="h2">Làm một lần, các bản sau tự lên.</h2>
+<p class="lead">App không bán trên App Store hay Microsoft Store, nên lần đầu hệ điều hành sẽ hỏi lại cho chắc. Các bước dưới đây là đủ.</p>
+</div>
+<div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); align-items: start">
+<div id="cai-ipad" class="card install" style="scroll-margin-top: 16px">
+<h3>iPad và iPhone</h3>
+<ol class="steps">
+<li><span><strong>Cài TrollStore.</strong> Chỉ cài được trên một số bản iOS / iPadOS — xem <a href="https://github.com/opa334/TrollStore" style="color: var(--accent); text-decoration: none">trang TrollStore</a>.</span></li>
+<li><span><strong>Tải tệp.</strong> Trên iPad / iPhone, mở <a href="https://github.com/Circling5714/ChimToTV/releases/download/conbangtv_ios/ConBangTV-iPad.ipa" style="color: var(--accent); text-decoration: none">ConBangTV-iPad.ipa</a> bằng Safari (một tệp cho cả iPad và iPhone).</span></li>
+<li><span><strong>Mở bằng TrollStore → Install.</strong> Bản sau: app báo «Có bản mới», bấm Cài đặt ngay là TrollStore tự cài đè, giữ lịch sử.</span></li>
 </ol>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #9AA3B2">Quen dùng Terminal? Một lệnh thay cho bước 3–5: <code style="font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 14px; color: #F2F4F8; background: #0E1014; padding: 2px 6px; border-radius: 6px; overflow-wrap: anywhere">xattr -dr com.apple.quarantine /Applications/ConBangTV.app</code></p>
 </div>
-<div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start">
-<figure style="flex: 1 1 260px; margin: 0; padding: clamp(16px, 2.4vw, 24px); background: #171A21; border: 1px solid rgba(255,255,255,0.08); border-radius: 24px; display: flex; flex-direction: column; align-items: center; gap: 14px; box-sizing: border-box">
+<div id="cai-windows" class="card install" style="scroll-margin-top: 16px">
+<h3>Windows</h3>
+<ol class="steps">
+<li><span><strong>Tải tệp.</strong> Tải <a href="https://github.com/Circling5714/ChimToTV/releases/download/conbangtv_windows/ConBangTV-Windows.exe" style="color: var(--accent); text-decoration: none">ConBangTV-Windows.exe</a>, để ở thư mục nào cũng được.</span></li>
+<li><span><strong>Mở tệp.</strong> Windows báo «Windows đã bảo vệ PC của bạn» (app chưa có chữ ký số): bấm <strong>Thông tin thêm → Vẫn chạy</strong> (More info → Run anyway).</span></li>
+<li><span><strong>Cho phép mạng.</strong> Lần đầu Windows hỏi cho app dùng mạng: chọn <strong>Cho phép</strong> để đồng bộ với tivi, iPad.</span></li>
+</ol>
+<p class="small">Không cần cài .NET. Máy chưa có Microsoft Edge WebView2 (Windows 10 / 11 cập nhật thường có sẵn) thì app báo và mở trang tải.</p>
+</div>
+<div id="cai-linux" class="card install" style="scroll-margin-top: 16px">
+<h3>Linux</h3>
+<ol class="steps">
+<li><span><strong>Tải tệp.</strong> Tải <a href="https://github.com/Circling5714/ChimToTV/releases/download/conbangtv_linux/ConBangTV-Linux.deb" style="color: var(--accent); text-decoration: none">ConBangTV-Linux.deb</a>.</span></li>
+<li><span><strong>Cài.</strong> Bấm đúp vào tệp, App Center (Cài đặt phần mềm) mở ra → <strong>Cài đặt</strong> → nhập mật khẩu máy. Hoặc trong Terminal: <code>sudo apt install ./ConBangTV-Linux.deb</code></span></li>
+<li><span><strong>Mở app.</strong> Tìm «Côn Bằng TV» trong danh sách ứng dụng. Bản sau app tự tải và cài (hệ thống hỏi mật khẩu máy).</span></li>
+</ol>
+<p class="small">Máy có card đồ hoạ Intel / AMD: cài thêm <code>gstreamer1.0-vaapi</code> để giải mã video bằng phần cứng, đỡ tốn CPU.</p>
+</div>
+</div>
+</section>
+
+<section id="cai-mac" class="wrap sec">
+<div class="head">
+<p class="eyebrow">Cài trên Mac</p>
+<h2 class="h2">Mở lần đầu trên Mac.</h2>
+<p class="lead">Côn Bằng TV không mua chứng chỉ của Apple nên macOS chặn ở lần mở đầu tiên. Cho phép một lần là xong — các bản sau app tự cập nhật.</p>
+</div>
+<div class="card install" style="border-radius: 28px">
+<ol class="steps">
+<li><span><strong>Tải bản Mac.</strong> Tải tệp <a href="https://github.com/Circling5714/ChimToTV/releases/download/conbangtv_macos/ConBangTV-Mac.zip" style="color: var(--accent); text-decoration: none">ConBangTV-Mac.zip</a> — macOS 12 trở lên, máy Intel hoặc chip Apple.</span></li>
+<li><span><strong>Giải nén, kéo vào Ứng dụng.</strong> Mở tệp .zip trong thư mục Tải về, kéo <strong>ConBangTV</strong> vào thư mục Ứng dụng (Applications) rồi mở app.</span></li>
+<li><span><strong>Bấm OK.</strong> Lần đầu macOS báo «Không thể mở "ConBangTV" vì ứng dụng này đến từ một nhà phát triển chưa được xác định».</span></li>
+<li><span><strong>Bấm Vẫn mở.</strong> Vào Cài đặt hệ thống → Quyền riêng tư &amp; Bảo mật, kéo xuống mục Bảo mật, bấm <strong>Vẫn mở</strong> cạnh dòng «"ConBangTV" đã bị chặn…», rồi nhập mật khẩu máy.</span></li>
+<li><span><strong>Bấm Mở.</strong> Chỉ làm một lần. Các bản sau app tự tìm, tự tải và tự thay bản mới.</span></li>
+</ol>
+<p class="small">Quen dùng Terminal? Một lệnh thay cho bước 3–5: <code>xattr -dr com.apple.quarantine /Applications/ConBangTV.app</code></p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start; margin-top: 24px">
+<figure class="card" style="flex: 1 1 260px; margin: 0; padding: clamp(16px, 2.4vw, 24px); display: flex; flex-direction: column; align-items: center; gap: 14px">
 <img src="assets/mac/1-bi-chan.png" alt="Hộp thoại macOS: Không thể mở ConBangTV vì ứng dụng này đến từ một nhà phát triển chưa được xác định, nút OK" width="282" height="289" loading="lazy" style="width: 100%; max-width: 282px; height: auto; display: block">
-<figcaption style="font-size: 15px; line-height: 1.5; color: #9AA3B2; text-align: center"><strong style="color: #F2F4F8; font-weight: 600">Bước 3</strong> — bấm OK</figcaption>
+<figcaption class="small" style="text-align: center"><strong>Bước 3</strong> — bấm OK</figcaption>
 </figure>
-<figure style="flex: 2 1 420px; margin: 0; padding: clamp(16px, 2.4vw, 24px); background: #171A21; border: 1px solid rgba(255,255,255,0.08); border-radius: 24px; display: flex; flex-direction: column; align-items: center; gap: 14px; box-sizing: border-box">
+<figure class="card" style="flex: 2 1 420px; margin: 0; padding: clamp(16px, 2.4vw, 24px); display: flex; flex-direction: column; align-items: center; gap: 14px">
 <img src="assets/mac/2-van-mo.png" alt="Cài đặt hệ thống, mục Bảo mật: ConBangTV đã bị chặn không cho sử dụng, nút Vẫn mở" width="503" height="213" loading="lazy" style="width: 100%; max-width: 503px; height: auto; display: block">
-<figcaption style="font-size: 15px; line-height: 1.5; color: #9AA3B2; text-align: center"><strong style="color: #F2F4F8; font-weight: 600">Bước 4</strong> — Quyền riêng tư &amp; Bảo mật → Vẫn mở</figcaption>
+<figcaption class="small" style="text-align: center"><strong>Bước 4</strong> — Quyền riêng tư &amp; Bảo mật → Vẫn mở</figcaption>
 </figure>
-<figure style="flex: 1 1 260px; margin: 0; padding: clamp(16px, 2.4vw, 24px); background: #171A21; border: 1px solid rgba(255,255,255,0.08); border-radius: 24px; display: flex; flex-direction: column; align-items: center; gap: 14px; box-sizing: border-box">
+<figure class="card" style="flex: 1 1 260px; margin: 0; padding: clamp(16px, 2.4vw, 24px); display: flex; flex-direction: column; align-items: center; gap: 14px">
 <img src="assets/mac/3-mo.png" alt="Hộp thoại macOS: macOS không thể xác minh nhà phát triển của ConBangTV, bạn có chắc chắn muốn mở không, nút Mở và Hủy" width="282" height="350" loading="lazy" style="width: 100%; max-width: 282px; height: auto; display: block">
-<figcaption style="font-size: 15px; line-height: 1.5; color: #9AA3B2; text-align: center"><strong style="color: #F2F4F8; font-weight: 600">Bước 5</strong> — bấm Mở</figcaption>
+<figcaption class="small" style="text-align: center"><strong>Bước 5</strong> — bấm Mở</figcaption>
 </figure>
 </div>
 </section>
 
-<section style="max-width: 1120px; margin: 0 auto; padding: clamp(72px, 10vw, 132px) clamp(20px, 5vw, 40px) 0; box-sizing: border-box">
-<div style="padding: clamp(40px, 7vw, 88px) clamp(24px, 5vw, 64px); background: #171A21; border: 1px solid rgba(255,255,255,0.08); border-radius: 32px; display: flex; flex-direction: column; align-items: center; gap: 24px; text-align: center; box-sizing: border-box">
+<!-- Đồng bộ trong nhà -->
+<section id="dong-bo" class="wrap sec">
+<div class="row">
+<div class="text">
+<p class="eyebrow">Đồng bộ trong nhà</p>
+<h2 class="h2">Xem dở chỗ này, mở máy kia xem tiếp.</h2>
+<p class="lead">Các máy cùng mạng Wi-Fi gửi thẳng cho nhau: lịch sử xem, chỗ đang xem từng tập, phim theo dõi và danh sách trang phim. Không có máy chủ ở giữa, không cần tài khoản.</p>
+</div>
+<div class="card install">
+<ol class="steps">
+<li><span><strong>Mở Đồng bộ trong nhà</strong> trên một máy (tivi, iPad, Mac: trong Cài đặt; Windows, Linux: mục ⇄ ở menu bên trái). Màn hình hiện <strong>mã ghép 4 số</strong>.</span></li>
+<li><span><strong>Trên máy kia</strong> cũng mở Đồng bộ trong nhà, chọn tên máy thứ nhất trong danh sách rồi nhập mã. Không thấy tên máy thì nhập địa chỉ IP của nó.</span></li>
+<li><span><strong>Xong.</strong> Từ đó các máy tự đồng bộ khi mở app và khi xem xong một tập. Người xem cùng tên được ghép với nhau.</span></li>
+</ol>
+<p class="small">Đồng bộ được giữa Android TV, điện thoại Android, iPad / iPhone, Windows, Mac và Linux. Xoá một phim khỏi lịch sử ở máy này thì máy kia cũng xoá.</p>
+</div>
+</div>
+</section>
+
+<!-- Riêng tư -->
+<section id="rieng-tu" class="wrap sec">
+<div class="head">
+<p class="eyebrow">Quyền riêng tư</p>
+<h2 class="h2">Không tài khoản, không theo dõi.</h2>
+<p class="lead">Côn Bằng TV không có máy chủ riêng và không biết bạn xem gì.</p>
+</div>
+<div class="grid">
+<div class="card feat">
+<h3 style="margin: 0">Dữ liệu nằm trên máy bạn</h3>
+<p class="muted">Lịch sử, người xem và cài đặt chỉ lưu trên từng máy. Đồng bộ trong nhà gửi thẳng giữa các máy trong mạng Wi-Fi. Mật khẩu proxy cất riêng, không gửi đi đâu.</p>
+</div>
+<div class="card feat">
+<h3 style="margin: 0">Chỉ kết nối nơi cần</h3>
+<p class="muted">Các trang phim bạn chọn; GitHub để kiểm tra bản mới; dịch vụ DNS mã hoá (NextDNS, Cloudflare, Google — tắt được). Không gắn công cụ thống kê hay quảng cáo.</p>
+</div>
+<div class="card feat">
+<h3 style="margin: 0">Chặn bớt rác của trang</h3>
+<p class="muted">Tên miền quảng cáo và theo dõi bị chặn ngay trong app; trang tự chuyển hướng sang quảng cáo thì bị dừng. Không bảo đảm chặn hết, nhưng đỡ hơn mở bằng trình duyệt.</p>
+</div>
+</div>
+</section>
+
+<!-- Hỏi đáp -->
+<section id="hoi-dap" class="wrap sec">
+<div class="head">
+<p class="eyebrow">Hỏi đáp</p>
+<h2 class="h2">Câu hỏi thường gặp.</h2>
+</div>
+<div class="faq">
+<details>
+<summary>App có mất phí, có quảng cáo không?</summary>
+<div class="ans"><p class="muted">Miễn phí, không tài khoản, không quảng cáo của app. Quảng cáo nằm sẵn trong các trang phim thì app lọc bớt, video app tự phát (KKPhim, NguonC) còn được bỏ đoạn quảng cáo chèn trước phim.</p></div>
+</details>
+<details>
+<summary>Phim lấy từ đâu?</summary>
+<div class="ans"><p class="muted">Từ các trang phim công khai trên Internet (xem <a href="#nguon-phim">Nguồn phim</a>). App chỉ là trình xem: không lưu trữ, không tải lên và không phát tán phim; phim nằm trên máy chủ của các trang đó.</p></div>
+</details>
+<details>
+<summary>Video giật hoặc không chạy thì làm gì?</summary>
+<div class="ans"><p class="muted">Nhấn <strong>▼</strong> (hoặc Menu) khi đang xem rồi chọn server khác — app ghi điểm từng server theo các lần xem trước nên chọn server «mượt» là chắc nhất. Phim vẫn xem tiếp đúng giây. TV box yếu nên chọn server 1080 thay vì 4K. Trang hỏng hẳn thì dùng <strong>KKPhim</strong> / <strong>NguonC</strong> trong cùng bảng.</p></div>
+</details>
+<details>
+<summary>Trang phim không vào được, báo quá thời gian chờ?</summary>
+<div class="ans"><p class="muted">Thường là nhà mạng chặn. Vượt chặn Mức 1 và DNS mã hoá đã bật sẵn; trang nào Mức 1 không lọt thì lần đầu chờ khoảng 4 giây, app tự thử Mức 2 và nhớ cho các lần sau. Vẫn không được thì vào <strong>Đổi trang phim</strong> để đo và chọn trang khác, hoặc dùng proxy. Xem thêm <a href="huong-dan.html#mang">hướng dẫn phần mạng</a>.</p></div>
+</details>
+<details>
+<summary>Cập nhật app thế nào?</summary>
+<div class="ans"><p class="muted">Không cần làm gì: mở app là app tự kiểm tra (tối đa vài giờ một lần), có bản mới thì hiện hộp «Có bản mới» với những thay đổi chính; bấm cài là xong, lịch sử và cài đặt giữ nguyên. Kiểm tra tay ở <strong>Cài đặt → Kiểm tra cập nhật</strong>.</p></div>
+</details>
+<details>
+<summary>Tivi đời cũ có chạy được không?</summary>
+<div class="ans"><p class="muted">Được nếu tivi / box chạy Android 5.0 trở lên. Tivi Samsung (Tizen), LG (webOS) không cài được tệp APK — cắm thêm một TV box Android, hoặc dùng máy tính Windows / Linux cắm vào tivi (bản máy tính có cỡ giao diện tới 175% và dùng được remote / bàn phím không dây).</p></div>
+</details>
+<details>
+<summary>Có cần VPN không?</summary>
+<div class="ans"><p class="muted">Không. Vượt chặn nhà mạng và DNS mã hoá đã có sẵn trong app, chỉ áp dụng cho app, không làm chậm các app khác trên máy.</p></div>
+</details>
+<details>
+<summary>Quên mã PIN thì sao?</summary>
+<div class="ans"><p class="muted">Mã PIN của một người xem: người lớn nhập <strong>mã PIN phụ huynh</strong> để mở thay. Quên cả mã PIN phụ huynh thì phải xoá dữ liệu app (lịch sử trên máy đó mất; máy đã đồng bộ trong nhà thì lấy lại được lịch sử từ máy khác).</p></div>
+</details>
+<details>
+<summary>Cài cho người nhà ở xa được không?</summary>
+<div class="ans"><p class="muted">Được: gửi họ mã Downloader <strong>9192365</strong>, hoặc mở <strong>Mời bạn bè cài app</strong> trong app để có sẵn tin nhắn hướng dẫn và mã QR. Trên iPad / điện thoại, nút «Gửi hướng dẫn…» chia sẻ thẳng qua Zalo, Tin nhắn.</p></div>
+</details>
+<details>
+<summary>Báo lỗi, góp ý ở đâu?</summary>
+<div class="ans"><p class="muted">Nhóm Telegram <a href="https://t.me/tivikit" style="color: var(--accent); text-decoration: none">t.me/tivikit</a> (trong app: <strong>Cài đặt → Liên hệ</strong>). Mã nguồn và các bản phát hành ở <a href="https://github.com/Circling5714/ChimToTV" style="color: var(--accent); text-decoration: none">GitHub</a>.</p></div>
+</details>
+</div>
+</section>
+
+<section class="wrap" style="padding-top: clamp(72px, 10vw, 132px)">
+<div class="card" style="padding: clamp(40px, 7vw, 88px) clamp(24px, 5vw, 64px); border-radius: 32px; display: flex; flex-direction: column; align-items: center; gap: 24px; text-align: center">
 <img src="assets/logo.png" alt="" style="width: 76px; height: 76px; border-radius: 18px; display: block">
 <h2 style="margin: 0; max-width: 18ch; font-size: clamp(30px, 4.4vw, 52px); line-height: 1.12; letter-spacing: -0.03em; font-weight: 700; text-wrap: balance">Mở Downloader, nhập 9192365.</h2>
-<p style="margin: 0; max-width: 44ch; font-size: clamp(16px, 1.6vw, 19px); line-height: 1.6; color: #9AA3B2">Miễn phí. Không tài khoản, không công cụ theo dõi.</p>
-<a href="#cai-dat" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 30px; border-radius: 999px; background: var(--accent); color: #1A1204; font-size: 17px; font-weight: 600; text-decoration: none; box-sizing: border-box">Cài trên Android TV</a>
+<p class="lead" style="max-width: 44ch">Miễn phí. Không tài khoản, không công cụ theo dõi.</p>
+<div style="display: flex; align-items: center; justify-content: center; gap: 12px 16px; flex-wrap: wrap">
+<a href="#cai-dat" class="btn">Cài trên Android TV</a>
+<a href="#nen-tang" class="btn-ghost">Tải cho máy khác</a>
+</div>
 </div>
 </section>
 
-<footer style="max-width: 1120px; margin: 0 auto; padding: clamp(48px, 7vw, 80px) clamp(20px, 5vw, 40px) 56px; display: flex; flex-direction: column; gap: 24px; box-sizing: border-box">
-<nav aria-label="Liên kết" style="display: flex; gap: 4px 28px; flex-wrap: wrap">
+<footer class="wrap" style="padding-top: clamp(48px, 7vw, 80px); padding-bottom: 56px; display: flex; flex-direction: column; gap: 20px">
+<nav aria-label="Tải về" style="display: flex; align-items: center; gap: 4px 24px; flex-wrap: wrap">
+<span style="font-size: 15px; font-weight: 600; color: var(--text)">Tải về:</span>
+<a href="https://github.com/Circling5714/ChimToTV/releases/latest/download/ConBangTV.apk" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; text-decoration: none">Android TV / điện thoại</a>
+<a href="https://github.com/Circling5714/ChimToTV/releases/download/conbangtv_ios/ConBangTV-iPad.ipa" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; text-decoration: none">iPad / iPhone</a>
+<a href="https://github.com/Circling5714/ChimToTV/releases/download/conbangtv_windows/ConBangTV-Windows.exe" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; text-decoration: none">Windows</a>
+<a href="https://github.com/Circling5714/ChimToTV/releases/download/conbangtv_macos/ConBangTV-Mac.zip" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; text-decoration: none">Mac</a>
+<a href="https://github.com/Circling5714/ChimToTV/releases/download/conbangtv_linux/ConBangTV-Linux.deb" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; text-decoration: none">Linux</a>
+</nav>
+<nav aria-label="Liên kết" style="display: flex; gap: 4px 24px; flex-wrap: wrap">
 <a href="huong-dan.html" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; text-decoration: none">Hướng dẫn sử dụng</a>
 <a href="https://github.com/Circling5714/ChimToTV" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; text-decoration: none">GitHub</a>
 <a href="https://github.com/Circling5714/ChimToTV/blob/main/CHANGELOG.md" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; text-decoration: none">Nhật ký phiên bản</a>
-<a href="https://github.com/Circling5714/ChimToTV#readme" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; text-decoration: none">Miễn trừ trách nhiệm và quyền riêng tư</a>
+<a href="https://github.com/Circling5714/ChimToTV#miễn-trừ-trách-nhiệm--quyền-riêng-tư" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; text-decoration: none">Miễn trừ trách nhiệm và quyền riêng tư</a>
 <a href="https://t.me/tivikit" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; text-decoration: none">Telegram</a>
 </nav>
-<p style="margin: 0; max-width: 78ch; font-size: 14px; line-height: 1.65; color: #9AA3B2">Côn Bằng TV chỉ là trình xem các trang phim công khai trên Internet. App không lưu trữ, không tải lên và không phát tán phim; mọi nội dung do trang web bên thứ ba cung cấp. Tên phim, hình ảnh và nhãn hiệu thuộc về chủ sở hữu hợp pháp.</p>
+<p style="margin: 0; max-width: 78ch; font-size: 14px; line-height: 1.65; color: var(--dim)">Côn Bằng TV chỉ là trình xem các trang phim công khai trên Internet. App không lưu trữ, không tải lên và không phát tán phim; mọi nội dung do trang web bên thứ ba cung cấp. Tên phim, hình ảnh và nhãn hiệu thuộc về chủ sở hữu hợp pháp. Côn Bằng TV không liên kết với trang web, hãng phim hay nhà phát hành nào.</p>
 </footer>
 
 </div>
@@ -273,6 +672,8 @@ window.scrollTo({top:0,behavior:calm?'auto':'smooth'});
 if(history.replaceState)history.replaceState(null,'',location.pathname+location.search);
 var t=document.querySelector('header a');if(t)t.focus({preventScroll:true});
 });
+// Mở câu hỏi theo #địa-chỉ (vd link từ trang Hướng dẫn)
+var h=location.hash&&document.querySelector('.faq '+location.hash);if(h&&h.tagName==='DETAILS')h.open=true;
 })();
 </script>
 </body>
