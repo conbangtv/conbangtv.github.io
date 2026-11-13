@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hướng dẫn sử dụng — Côn Bằng TV</title>
+<meta name="description" content="Hướng dẫn chi tiết Côn Bằng TV: người xem, mã PIN và hồ sơ trẻ em; tuỳ chỉnh trang chủ; theo dõi phim; tìm kiếm; DNS mã hoá, vượt chặn nhà mạng và proxy; menu khi xem phim.">
+<meta name="theme-color" content="#0E1014">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hướng dẫn sử dụng Côn Bằng TV">
+<meta property="og:description" content="Người xem và mã PIN, hồ sơ trẻ em, tuỳ chỉnh trang chủ, theo dõi phim, tìm kiếm, vượt chặn nhà mạng, menu khi xem phim.">
+<meta property="og:url" content="https://conbangtv.github.io/huong-dan.html">
+<meta property="og:image" content="https://conbangtv.github.io/assets/hd/xem-phim-menu.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://conbangtv.github.io/huong-dan.html">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="apple-touch-icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--accent:#FFB020;--bg:#0E1014;--surface:#171A21;--surface2:#1F232C;--text:#F2F4F8;--dim:#9AA3B2;--line:rgba(255,255,255,.10);--line2:rgba(255,255,255,.18)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:'Be Vietnam Pro',system-ui,-apple-system,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased;line-height:1.6;overflow-x:hidden}
+a{color:var(--dim)}a:hover{color:var(--text)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+.wrap{max-width:1120px;margin:0 auto;padding:0 clamp(20px,5vw,40px)}
+.site-head{display:flex;align-items:center;justify-content:space-between;gap:16px 28px;flex-wrap:wrap;padding-top:20px;padding-bottom:20px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text);min-height:44px}
+.brand img{width:36px;height:36px;border-radius:9px;display:block}
+.brand span{font-size:17px;font-weight:600;letter-spacing:-.01em}
+.site-nav{display:flex;align-items:center;gap:8px 28px;flex-wrap:wrap}
+.site-nav a{font-size:15px;text-decoration:none;padding:12px 0}
+.site-nav a[aria-current]{color:var(--text)}
+.site-nav .pill{color:var(--text);padding:11px 18px;border:1px solid var(--line2);border-radius:999px}
+.eyebrow{margin:0;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.hero{padding-top:clamp(36px,7vw,88px);display:flex;flex-direction:column;gap:20px;max-width:780px}
+h1{margin:0;font-size:clamp(38px,6.4vw,72px);line-height:1.06;letter-spacing:-.035em;font-weight:700;text-wrap:balance}
+.lead{margin:0;font-size:clamp(17px,1.9vw,20px);line-height:1.6;color:var(--dim);text-wrap:pretty;max-width:52ch}
+.meta{margin:0;font-size:14px;color:var(--dim)}
+.toc{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:14px;margin:clamp(36px,5vw,56px) 0 0;padding:0;list-style:none}
+.toc a{display:flex;gap:16px;align-items:flex-start;height:100%;padding:22px 24px;background:var(--surface);border:1px solid var(--line);border-radius:20px;text-decoration:none;color:var(--text)}
+.toc a:hover{border-color:var(--line2)}
+.toc .n{flex:none;font-size:14px;font-weight:600;color:var(--accent);font-variant-numeric:tabular-nums;padding-top:3px}
+.toc strong{display:block;font-size:18px;font-weight:600;letter-spacing:-.01em;line-height:1.35}
+.toc small{display:block;margin-top:4px;font-size:15px;color:var(--dim);line-height:1.5}
+.topic{padding-top:clamp(80px,10vw,132px);scroll-margin-top:12px}
+.topic-head{display:flex;flex-direction:column;gap:14px;max-width:780px}
+h2{margin:0;font-size:clamp(30px,4.4vw,50px);line-height:1.1;letter-spacing:-.03em;font-weight:700;text-wrap:balance}
+.body{max-width:780px}
+h3{margin:clamp(44px,5vw,60px) 0 0;font-size:clamp(21px,2.3vw,26px);line-height:1.3;letter-spacing:-.015em;font-weight:600;scroll-margin-top:12px}
+.body p,.body li{font-size:17px;line-height:1.7;color:var(--dim)}
+.body p{margin:14px 0 0}
+.body ul,.body ol{margin:14px 0 0;padding-left:22px}
+.body li{margin-top:8px}
+.body li::marker{color:var(--accent)}
+.body strong{color:var(--text);font-weight:600}
+.ui{color:var(--text)}
+kbd{display:inline-block;min-width:1.7em;padding:0 7px;border:1px solid var(--line2);border-bottom-width:2px;border-radius:7px;background:var(--surface2);color:var(--text);font:inherit;font-size:.86em;line-height:1.55;text-align:center;white-space:nowrap}
+figure.shot{margin:30px 0 0}
+.frame{padding:1.2%;background:#050608;border:1px solid rgba(255,255,255,.12);border-radius:clamp(10px,1.8vw,18px);box-shadow:0 30px 80px rgba(0,0,0,.45)}
+.frame img{display:block;width:100%;height:auto;aspect-ratio:16/9;border-radius:clamp(5px,1vw,10px)}
+.zoom{display:block;border-radius:clamp(5px,1vw,10px);cursor:zoom-in}
+figcaption{margin-top:12px;font-size:15px;line-height:1.55;color:var(--dim)}
+.callout{margin:26px 0 0;padding:18px 22px;background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:14px}
+.callout p{margin:0;font-size:16px;line-height:1.65}
+.callout p+p{margin-top:8px}
+.callout .t{display:block;margin-bottom:6px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.callout.note{border-left-color:#6E95E8}.callout.note .t{color:#93B2F5}
+.steps{list-style:none;padding:0!important;margin:18px 0 0;display:flex;flex-direction:column;gap:12px;counter-reset:s}
+.steps li{display:flex;gap:16px;align-items:flex-start;margin:0}
+.steps li::before{counter-increment:s;content:counter(s);flex:none;width:30px;height:30px;margin-top:2px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.22);border-radius:50%;font-size:14px;font-weight:600;color:var(--text)}
+.card{margin-top:28px;padding:clamp(22px,3.4vw,34px);background:var(--surface);border:1px solid var(--line);border-radius:24px}
+.card h4{margin:0;font-size:20px;font-weight:600;letter-spacing:-.01em}
+table.grid{width:100%;border-collapse:collapse;margin-top:18px;font-size:16px}
+table.grid th{text-align:left;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);padding:0 16px 10px 0;border-bottom:1px solid var(--line2)}
+table.grid td{padding:14px 16px 14px 0;border-bottom:1px solid var(--line);vertical-align:top;color:var(--dim);line-height:1.6}
+table.grid td:first-child{color:var(--text);font-weight:500}
+table.grid td:last-child,table.grid th:last-child{padding-right:0}
+@media (max-width:640px){
+  table.grid thead{display:none}
+  table.grid tr{display:block;padding:14px 0;border-bottom:1px solid var(--line)}
+  table.grid td{display:block;padding:3px 0;border:0}
+  table.grid td[data-label]::before{content:attr(data-label);display:block;margin-top:8px;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+}
+.layers{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr));gap:14px;margin-top:26px}
+.layer{padding:22px;background:var(--surface);border:1px solid var(--line);border-radius:20px}
+.state{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:rgba(255,176,32,.14);color:var(--accent)}
+.state.off{background:rgba(255,255,255,.08);color:var(--dim)}
+.layer h4{margin:12px 0 0;font-size:19px;font-weight:600}
+.layer p{margin:8px 0 0;font-size:15px;line-height:1.6;color:var(--dim)}
+.picker{margin:30px 0 0;padding:clamp(26px,5vw,48px) 16px;background:#0B0D11;border:1px solid rgba(255,255,255,.12);border-radius:clamp(10px,1.8vw,18px);text-align:center}
+.picker .pt{margin:0;font-size:clamp(22px,3vw,30px);font-weight:700}
+.picker .ps{margin:6px 0 0;font-size:14px;color:var(--dim)}
+.avatars{display:flex;justify-content:center;flex-wrap:wrap;gap:12px clamp(10px,3vw,28px);margin-top:26px}
+.av{width:clamp(88px,18vw,124px);padding:14px 6px 12px;border:3px solid transparent;border-radius:18px}
+.av.on{border-color:var(--accent);background:rgba(255,176,32,.12)}
+.av span{display:flex;align-items:center;justify-content:center;width:clamp(52px,10vw,70px);height:clamp(52px,10vw,70px);margin:0 auto;border-radius:50%;font-size:clamp(22px,4vw,30px);font-weight:700;color:#fff}
+.av.add span{background:#232833;color:var(--text);font-weight:400}
+.av em{display:block;margin-top:10px;font-style:normal;font-size:15px;color:var(--text)}
+.av.add em{color:var(--dim)}
+.toplink{display:inline-flex;align-items:center;min-height:44px;margin-top:22px;font-size:15px;text-decoration:none}
+.site-foot{padding-top:clamp(80px,10vw,120px);padding-bottom:56px;display:flex;flex-direction:column;gap:24px}
+.site-foot nav{display:flex;gap:4px 28px;flex-wrap:wrap}
+.site-foot nav a{display:inline-flex;align-items:center;min-height:44px;font-size:15px;text-decoration:none}
+.site-foot p{margin:0;max-width:78ch;font-size:14px;line-height:1.65;color:var(--dim)}
+</style>
+</head>
+<body>
+<div id="top">
+
+<header class="wrap site-head">
+<a class="brand" href="index.html"><img src="assets/logo.png" alt=""><span>Côn Bằng TV</span></a>
+<nav class="site-nav" aria-label="Trang">
+<a href="index.html#cai-dat">Cài đặt</a>
+<a href="index.html#tinh-nang">Tính năng</a>
+<a href="huong-dan.html" aria-current="page">Hướng dẫn</a>
+<a class="pill" href="https://github.com/Circling5714/ChimToTV">GitHub</a>
+</nav>
+</header>
+
+<main class="wrap">
+
+<section class="hero">
+<p class="eyebrow">Hướng dẫn sử dụng</p>
+<h1>Dùng Côn Bằng TV cho thật thuận tay.</h1>
+<p class="lead">Từ hồ sơ riêng cho từng người, chế độ trẻ em, trang chủ theo ý mình, tới cách vào được trang bị chặn và đổi server khi phim chậm.</p>
+<p class="meta">Theo bản Android TV 2.16.1 · iPad / iPhone 1.16.1 · Windows 1.14 — cập nhật 13/11/2026</p>
+</section>
+
+<ol class="toc">
+<li><a href="#nguoi-xem"><span class="n">01</span><span><strong>Người xem, mã PIN, trẻ em</strong><small>Hồ sơ riêng, khoá hồ sơ, giới hạn giờ xem</small></span></a></li>
+<li><a href="#trang-chu"><span class="n">02</span><span><strong>Tuỳ chỉnh trang chủ</strong><small>Ẩn, xếp, thêm hàng phim; chọn nguồn</small></span></a></li>
+<li><a href="#theo-doi"><span class="n">03</span><span><strong>Theo dõi phim</strong><small>Báo ngay khi có tập mới</small></span></a></li>
+<li><a href="#tim-kiem"><span class="n">04</span><span><strong>Tìm kiếm</strong><small>Một ô tìm cho mọi trang phim</small></span></a></li>
+<li><a href="#mang"><span class="n">05</span><span><strong>DNS, vượt chặn, proxy</strong><small>Vào được trang bị nhà mạng chặn</small></span></a></li>
+<li><a href="#xem-phim"><span class="n">06</span><span><strong>Xem phim và menu ▼</strong><small>Đổi server ngay lúc phim đang tải</small></span></a></li>
+</ol>
+
+<section class="topic" aria-labelledby="cach-bam-h">
+<div class="topic-head">
+<p class="eyebrow">Trước khi bắt đầu</p>
+<h2 id="cach-bam-h">Cách bấm trên từng máy</h2>
+</div>
+<div class="body">
+<p>Hướng dẫn viết theo remote của bản Android TV. Bản iPad / iPhone và Windows có cùng các mục, cùng tên trong <span class="ui">Cài đặt</span>; chỉ khác cách bấm:</p>
+<table class="grid">
+<thead><tr><th>Việc</th><th>Android TV (remote)</th><th>iPad / iPhone</th><th>Windows</th></tr></thead>
+<tbody>
+<tr><td>Chọn, mở</td><td data-label="Android TV"><kbd>OK</kbd></td><td data-label="iPad / iPhone">Chạm</td><td data-label="Windows"><kbd>Enter</kbd> hoặc bấm chuột</td></tr>
+<tr><td>Tuỳ chọn trên một phim (xoá khỏi lịch sử, bỏ theo dõi, sửa hàng trang chủ)</td><td data-label="Android TV"><kbd>Menu</kbd> hoặc giữ <kbd>OK</kbd></td><td data-label="iPad / iPhone">Giữ ngón tay trên phim</td><td data-label="Windows">Chuột phải</td></tr>
+<tr><td>Quay lại</td><td data-label="Android TV"><kbd>Back</kbd></td><td data-label="iPad / iPhone">Nút ‹ ở góc trên</td><td data-label="Windows"><kbd>Esc</kbd> / <kbd>Backspace</kbd></td></tr>
+<tr><td>Menu khi đang xem phim</td><td data-label="Android TV"><kbd>▼</kbd></td><td data-label="iPad / iPhone">Chạm vào phim → <span class="ui">Menu</span></td><td data-label="Windows"><kbd>▼</kbd> hoặc <kbd>M</kbd></td></tr>
+</tbody>
+</table>
+<p>Điện thoại Android dùng chung bản TV: chạm như iPhone, cầm dọc thì menu ẩn vào nút <span class="ui">☰</span>.</p>
+</div>
+</section>
+
+<!-- 01 -->
+<section class="topic" id="nguoi-xem" aria-labelledby="nguoi-xem-h">
+<div class="topic-head">
+<p class="eyebrow">01 · Người xem</p>
+<h2 id="nguoi-xem-h">Mỗi người một hồ sơ, khoá bằng mã PIN, có chế độ cho trẻ em.</h2>
+<p class="lead">Mỗi người trong nhà có lịch sử, hàng Xem tiếp và phim theo dõi riêng. Hồ sơ người lớn khoá bằng mã PIN; hồ sơ của bé chỉ thấy hoạt hình và có giới hạn giờ xem.</p>
+</div>
+<div class="body">
+
+<h3>Thêm người xem</h3>
+<ol class="steps">
+<li><span>Mở <span class="ui">Cài đặt</span> (mục cuối menu bên trái) → mục <span class="ui">Người xem</span> → <span class="ui">＋ Thêm người xem</span>. Tối đa 8 người, mỗi người một màu.</span></li>
+<li><span>Người mới bắt đầu với trang phim và cách xem của người đang dùng, lịch sử trống. Lịch sử có từ trước thuộc người đầu tiên, <span class="ui">Cả nhà</span> — đổi tên được.</span></li>
+<li><span>Chọn một người trong danh sách để chuyển sang, đổi tên / màu, đặt mã PIN hoặc xoá.</span></li>
+</ol>
+<figure class="shot">
+<div class="frame"><a href="assets/hd/cai-dat-nguoi-xem.jpg" class="zoom" aria-label="Xem ảnh cỡ lớn"><img src="assets/hd/cai-dat-nguoi-xem.jpg" alt="Cài đặt trên tivi, mục Người xem: hồ sơ Cả nhà, nút Thêm người xem, Hỏi Ai đang xem khi mở app, Giới hạn giờ xem, Đồng bộ với iPad / iPhone" width="1280" height="720" loading="lazy"></a></div>
+<figcaption>Cài đặt → Người xem trên tivi. Ngay dưới là mục Trang chủ, nơi bật hồ sơ trẻ em.</figcaption>
+</figure>
+
+<h3>Chọn người khi mở app</h3>
+<p>Nhà có từ 2 người thì mỗi lần mở app — và khi quay lại sau 30 phút không dùng — app hỏi <span class="ui">Ai đang xem?</span>: <kbd>◀</kbd> <kbd>▶</kbd> để chọn, <kbd>OK</kbd> để vào. Người có 🔒 phải gõ mã PIN bằng phím số trên remote hoặc bàn phím trên màn hình.</p>
+<div class="picker" role="img" aria-label="Minh hoạ màn Ai đang xem? với hồ sơ Bố và Mẹ có khoá, hồ sơ Su của bé và nút Thêm người">
+<p class="pt">Ai đang xem?</p>
+<p class="ps">Minh hoạ</p>
+<div class="avatars">
+<div class="av on"><span style="background:#2BB585">B</span><em>Bố 🔒</em></div>
+<div class="av"><span style="background:#E5533D">M</span><em>Mẹ 🔒</em></div>
+<div class="av"><span style="background:#3B82F6">S</span><em>Su</em></div>
+<div class="av add"><span>+</span><em>Thêm người</em></div>
+</div>
+</div>
+<ul>
+<li>Đổi người lúc nào cũng được: mục <span class="ui">Người xem: …</span> ở đầu menu bên trái.</li>
+<li>Không muốn bị hỏi: <span class="ui">Cài đặt</span> → <span class="ui">Hỏi «Ai đang xem?» khi mở app: Tắt</span>.</li>
+</ul>
+<table class="grid">
+<thead><tr><th>Riêng từng người</th><th>Dùng chung cả nhà</th></tr></thead>
+<tbody>
+<tr><td>Lịch sử xem, Xem tiếp, chỗ đang xem dở, tập đã xem, phim theo dõi, trang phim đang dùng, server ưa thích (vd bố xem Thuyết minh, con xem Vietsub), các hàng và nguồn trang chủ, hồ sơ trẻ em, bước tua, tự chuyển tập, khung hình, Xem riêng</td><td data-label="Dùng chung cả nhà">Danh sách trang phim, proxy, DNS mã hoá, vượt chặn nhà mạng, dữ liệu duyệt web, điểm server, mốc nhạc mở đầu</td></tr>
+</tbody>
+</table>
+
+<h3>Khoá hồ sơ bằng mã PIN</h3>
+<ul>
+<li><span class="ui">Cài đặt</span> → chọn người → <span class="ui">Đặt mã PIN</span> (4 số). Đổi hoặc tắt mã ở cùng chỗ.</li>
+<li>Hồ sơ có mã phải nhập đúng mới mở, sửa hay xoá được.</li>
+<li>Người đang dùng có mã thì mở app luôn phải nhập mã, kể cả khi đã tắt hỏi «Ai đang xem?».</li>
+</ul>
+<div class="callout note"><span class="t">Lưu ý</span><p>Mã PIN để trẻ không vào nhầm hồ sơ người lớn, không phải mật khẩu bảo mật. Quên mã thì chỉ còn cách xoá dữ liệu của app — mất cả lịch sử và cài đặt, nên hãy ghi lại mã.</p></div>
+
+<h3>Hồ sơ trẻ em</h3>
+<ol class="steps">
+<li><span>Chuyển sang hồ sơ của bé.</span></li>
+<li><span><span class="ui">Cài đặt</span> → mục <span class="ui">Trang chủ</span> → <span class="ui">Hồ sơ trẻ em: Bật</span>.</span></li>
+</ol>
+<p>Trang chủ của hồ sơ này chỉ còn hoạt hình hợp trẻ em: thiếu nhi, gia đình, lồng tiếng; bỏ phim 18+, kinh dị, hình sự, chiến tranh. Gợi ý theo lịch sử, <span class="ui">Điểm IMDb cao</span> và phim liên quan cũng chỉ lấy hoạt hình. Tắt hồ sơ trẻ em, sửa hàng hay nguồn trang chủ của hồ sơ này cần <strong>mã PIN phụ huynh</strong> (nếu đã đặt ở Giới hạn giờ xem).</p>
+<div class="callout note"><span class="t">Lưu ý</span><p>Hồ sơ trẻ em chỉ lọc trang chủ. Mục Tìm kiếm và các mục của từng trang phim vẫn như cũ — muốn chặt hơn thì dùng thêm giới hạn giờ xem và mã PIN cho hồ sơ người lớn.</p></div>
+
+<h3>Giới hạn giờ xem</h3>
+<p><span class="ui">Cài đặt</span> → <span class="ui">Người xem</span> → <span class="ui">Giới hạn giờ xem…</span> Lần đầu app bắt đặt <strong>mã PIN phụ huynh</strong> (4 số, nhập hai lần — khác mã PIN của từng người), rồi chọn cho từng người:</p>
+<ul>
+<li><strong>Mỗi ngày được xem:</strong> 30 hoặc 45 phút, 1 giờ, 1 giờ 30, 2 giờ, 3 giờ, hoặc không giới hạn. Chỉ đếm lúc phim thật sự chạy, không tính lúc dừng hay chờ tải; sang ngày mới đếm lại.</li>
+<li><strong>Giờ đi ngủ:</strong> chọn từ 19:30 tới 23:00 — từ giờ đó tới 6 giờ sáng không xem được.</li>
+<li>Còn 5 phút thì trình phát nhắc. Hết giờ phim dừng, hiện màn <span class="ui">Hết giờ xem</span>: người lớn nhập mã phụ huynh để cho xem thêm 15, 30, 60 phút hoặc không giới hạn tới 6 giờ sáng; không thì chọn <span class="ui">Thoát</span>.</li>
+<li>Đã có giới hạn thì thêm hay xoá người xem cũng cần mã phụ huynh — trẻ không lách được bằng hồ sơ mới.</li>
+</ul>
+
+<div class="card">
+<h4>Nhà có trẻ nhỏ: cài trong 5 bước</h4>
+<ol class="steps">
+<li><span>Thêm hồ sơ cho bé.</span></li>
+<li><span>Đặt mã PIN cho các hồ sơ người lớn.</span></li>
+<li><span>Chuyển sang hồ sơ của bé → bật <span class="ui">Hồ sơ trẻ em</span>.</span></li>
+<li><span><span class="ui">Giới hạn giờ xem…</span> → đặt mã phụ huynh → chọn số phút mỗi ngày và giờ đi ngủ cho bé.</span></li>
+<li><span>Để <span class="ui">Hỏi «Ai đang xem?» khi mở app</span> ở Bật.</span></li>
+</ol>
+</div>
+<div class="callout"><span class="t">Trên iPad / iPhone và Windows</span><p>Cùng các mục trong Cài đặt. Các máy đã ghép đồng bộ trong nhà (Cài đặt → Đồng bộ) thì lịch sử, Xem tiếp, phim theo dõi đồng bộ theo tên người xem; mã PIN và giới hạn giờ xem lưu riêng từng máy.</p></div>
+<a class="toplink" href="#top">↑ Về đầu trang</a>
+</div>
+</section>
+
+<!-- 02 -->
+<section class="topic" id="trang-chu" aria-labelledby="trang-chu-h">
+<div class="topic-head">
+<p class="eyebrow">02 · Trang chủ</p>
+<h2 id="trang-chu-h">Trang chủ theo ý mình.</h2>
+<p class="lead">Trang chủ gom phim mới từ mọi nguồn, gộp phim trùng và xếp theo những gì bạn hay xem. Mỗi người tự chọn hàng nào hiện, thứ tự ra sao, lấy phim từ đâu.</p>
+</div>
+<div class="body">
+
+<h3>Các hàng có sẵn</h3>
+<ul>
+<li><strong>Có tập mới</strong> — phim theo dõi, và phim đang xem dở (trong 30 ngày) vừa ra tập mới ở bất kỳ trang nào. Nhãn «có ở nguonc» nghĩa là tập mới nằm ở trang khác.</li>
+<li><strong>Xem tiếp</strong> — <kbd>OK</kbd> là phát tiếp đúng chỗ đang xem.</li>
+<li><strong>Giống «phim vừa xem»</strong>, <strong>Vì … hay xem &lt;thể loại&gt;</strong>, loại phim hay xem mới cập nhật, <strong>Thuyết minh mới</strong> (khi bạn hay xem bản thuyết minh / lồng tiếng), <strong>Mới cập nhật · mọi nguồn</strong>, <strong>Phim lẻ mới</strong>.</li>
+<li>Người chưa xem gì: chọn vài chủ đề (Hoạt hình Trung Quốc, Kiếm hiệp, Phim Hàn…) — mỗi chủ đề thành một hàng.</li>
+</ul>
+<p>Mỗi hàng là một dải vuốt ngang: <kbd>◀</kbd> <kbd>▶</kbd> đi trong dải, <kbd>▲</kbd> <kbd>▼</kbd> sang hàng khác, ô cuối <span class="ui">Xem thêm</span> mở cả hàng. Góc thẻ ghi «2 nguồn» là phim có ở nhiều trang.</p>
+
+<h3>Sửa nhanh ngay trên trang chủ</h3>
+<p>Đứng trên một phim của hàng muốn sửa (hoặc ô <span class="ui">Xem thêm</span>) rồi nhấn <kbd>Menu</kbd> hoặc giữ <kbd>OK</kbd>:</p>
+<ul>
+<li><span class="ui">Ẩn hàng này</span></li>
+<li><span class="ui">▲ Chuyển lên</span> / <span class="ui">▼ Chuyển xuống</span> — đổi chỗ với hàng kề bên</li>
+<li><span class="ui">Các hàng trên trang chủ…</span>, <span class="ui">Nguồn cho trang chủ…</span> — mở thẳng phần cài đặt bên dưới</li>
+</ul>
+<figure class="shot">
+<div class="frame"><a href="assets/hd/trang-chu-sua-nhanh.jpg" class="zoom" aria-label="Xem ảnh cỡ lớn"><img src="assets/hd/trang-chu-sua-nhanh.jpg" alt="Hộp sửa nhanh hàng Giống Tiên Nghịch trên trang chủ: Ẩn hàng này, Chuyển xuống, Các hàng trên trang chủ, Nguồn cho trang chủ" width="1280" height="720" loading="lazy"></a></div>
+<figcaption>Nhấn Menu trên một phim của hàng «Giống «Tiên Nghịch»».</figcaption>
+</figure>
+
+<h3>Bật, tắt, xếp và thêm hàng</h3>
+<p><span class="ui">Cài đặt</span> → mục <span class="ui">Trang chủ</span> → <span class="ui">Các hàng trên trang chủ…</span></p>
+<ul>
+<li><strong>✓</strong> bật / tắt từng hàng. Hàng tắt thì không tải, trang chủ mở nhanh hơn.</li>
+<li><strong>▲ ▼</strong> đổi thứ tự. «Có tập mới» và «Xem tiếp» luôn ở đầu trang, chỉ bật / tắt.</li>
+<li><strong>＋ Thêm hàng…</strong> (tối đa 6): chọn chủ đề có sẵn, hoặc tự ghép loại phim + nước + thể loại + ngôn ngữ — vd «Hoạt hình Nhật Bản · viễn tưởng». Hàng mới đứng sau «Xem tiếp», đổi chỗ được, <strong>✕</strong> để xoá.</li>
+<li><strong>Mặc định</strong>: trả thứ tự cũ và bật lại mọi hàng, giữ các hàng bạn tự thêm.</li>
+</ul>
+<figure class="shot">
+<div class="frame"><a href="assets/hd/cac-hang-trang-chu.jpg" class="zoom" aria-label="Xem ảnh cỡ lớn"><img src="assets/hd/cac-hang-trang-chu.jpg" alt="Hộp Các hàng trên trang chủ: dấu tích bật tắt từng hàng và nút mũi tên lên xuống đổi thứ tự" width="1280" height="720" loading="lazy"></a></div>
+<figcaption>Các hàng trên trang chủ: ✓ bật / tắt, ▲ ▼ đổi thứ tự. Kéo xuống cuối hộp là nút ＋ Thêm hàng….</figcaption>
+</figure>
+
+<h3>Chọn nguồn phim cho trang chủ</h3>
+<ul>
+<li><span class="ui">Nguồn cho trang chủ…</span>: bật / tắt KKPhim, NguonC, VSMOV, CLB Phim Xưa và «trang đang dùng + trang xem gần đây». Phải còn ít nhất một nguồn. Tắt nguồn thì phim theo dõi vẫn báo tập mới.</li>
+<li>Nút <span class="ui">Trang chủ: Tổng hợp mọi nguồn</span> đổi sang <span class="ui">Theo trang đang dùng</span> nếu bạn chỉ muốn trang chủ của một trang phim.</li>
+</ul>
+<div class="callout"><span class="t">Mẹo</span><p>Trang chủ chậm? Tắt bớt hàng và nguồn ít xem. Dòng nhỏ góc phải ghi «Cập nhật lúc …». Trang nào lỗi hoặc chậm quá 6 giây thì app dùng bản đã lưu; lỗi 3 lần liền thì tạm nghỉ trang đó 30 phút — muốn hỏi lại ngay: <span class="ui">Cài đặt</span> → <span class="ui">Trang chủ</span> → <span class="ui">Thử lại ngay</span>.</p></div>
+<div class="callout"><span class="t">Trên iPad / iPhone và Windows</span><p>Sửa nhanh: iPad / iPhone giữ ngón tay trên phim hoặc tên hàng; Windows nhấn chuột phải hoặc phím <kbd>M</kbd>. Cài đặt các hàng không đồng bộ giữa các máy.</p></div>
+<a class="toplink" href="#top">↑ Về đầu trang</a>
+</div>
+</section>
+
+<!-- 03 -->
+<section class="topic" id="theo-doi" aria-labelledby="theo-doi-h">
+<div class="topic-head">
+<p class="eyebrow">03 · Theo dõi phim</p>
+<h2 id="theo-doi-h">Bấm theo dõi một lần, có tập mới là biết.</h2>
+</div>
+<div class="body">
+
+<h3>Theo dõi một phim</h3>
+<p>Mở trang phim, đi sang phải dọc hàng nút tới <span class="ui">＋ Theo dõi</span> rồi nhấn <kbd>OK</kbd>. Nút đổi thành <span class="ui">✓ Đang theo dõi</span>; nhấn lần nữa là bỏ theo dõi.</p>
+<figure class="shot">
+<div class="frame"><a href="assets/hd/theo-doi.jpg" class="zoom" aria-label="Xem ảnh cỡ lớn"><img src="assets/hd/theo-doi.jpg" alt="Trang phim Cuồng Vương phần 2: hàng nút Xem tập mới nhất, Xem từ tập 1, Nguồn, Liên quan, Thứ tự, Theo dõi đang được chọn; bên dưới là danh sách tập" width="1280" height="720" loading="lazy"></a></div>
+<figcaption>Trang phim: nút ＋ Theo dõi ở cuối hàng nút.</figcaption>
+</figure>
+
+<h3>Khi phim ra tập mới</h3>
+<ul>
+<li>Mỗi lần mở trang chủ (tối đa 30 phút một lần), app hỏi lại các trang của phim đang theo dõi.</li>
+<li>Có tập mới: phim lên hàng <strong>Có tập mới</strong> ở đầu trang chủ với nhãn «Tập 166 mới», mục menu đổi thành <span class="ui">Theo dõi (1 mới)</span> và app hiện thông báo.</li>
+<li>Mở phim hoặc xem tập đó là hết «mới».</li>
+<li>App chỉ kiểm tra khi đang mở, không chạy ngầm lúc tắt.</li>
+</ul>
+
+<h3>Quản lý danh sách</h3>
+<ul>
+<li>Mục <span class="ui">Phim theo dõi</span> ở menu bên trái liệt kê tất cả.</li>
+<li>Bỏ theo dõi ngay trong danh sách: nhấn <kbd>Menu</kbd> hoặc giữ <kbd>OK</kbd> trên phim.</li>
+<li>Phim đang xem dở cũng tự vào hàng «Có tập mới» khi ra tập mới, kể cả khi bạn chưa bấm theo dõi.</li>
+</ul>
+
+<h3>Mẹo trên trang phim</h3>
+<ul>
+<li><kbd>▼</kbd> xuống danh sách tập — ô màu xanh là tập đã xem.</li>
+<li>Gõ số tập bằng phím số (hoặc nút <span class="ui">Đến tập…</span>) để nhảy thẳng tới tập đó.</li>
+<li><span class="ui">Nguồn: … ▾</span> mở cùng phim ở trang khác — khi trang này thiếu tập hoặc chậm.</li>
+<li><span class="ui">Liên quan ▼</span> nhảy xuống các hàng <span class="ui">Cùng bộ</span> (các phần, mùa khác) và <span class="ui">Cùng thể loại</span>.</li>
+</ul>
+<a class="toplink" href="#top">↑ Về đầu trang</a>
+</div>
+</section>
+
+<!-- 04 -->
+<section class="topic" id="tim-kiem" aria-labelledby="tim-kiem-h">
+<div class="topic-head">
+<p class="eyebrow">04 · Tìm kiếm</p>
+<h2 id="tim-kiem-h">Một ô tìm cho mọi trang phim.</h2>
+</div>
+<div class="body">
+<ol class="steps">
+<li><span>Menu bên trái → <span class="ui">Tìm kiếm</span>.</span></li>
+<li><span>Gõ tên phim rồi nhấn <kbd>OK</kbd> / <kbd>Enter</kbd> (nút kính lúp trên bàn phím màn hình).</span></li>
+</ol>
+<p>App tìm cùng lúc trên mọi trang trong danh sách. Trang nào trả lời trước hiện trước, mỗi trang một nhóm «tên trang — N phim»; trang chậm không bắt trang nhanh phải chờ. Dòng cuối ghi trang nào còn đang tìm, không có phim hoặc không trả lời. Gõ không dấu cũng thường tìm được.</p>
+<figure class="shot">
+<div class="frame"><a href="assets/hd/tim-kiem.jpg" class="zoom" aria-label="Xem ảnh cỡ lớn"><img src="assets/hd/tim-kiem.jpg" alt="Kết quả tìm tien nghich trên mọi trang: nhóm hoathinh3d.ee với 20 phim, gồm Tiên Nghịch và các phim cùng tên" width="1280" height="720" loading="lazy"></a></div>
+<figcaption>Gõ «tien nghich» không dấu vẫn ra «Tiên Nghịch».</figcaption>
+</figure>
+
+<h3>Gõ chữ cho nhanh</h3>
+<ul>
+<li>Tivi Google TV / Android TV: app <strong>Google TV</strong> trên điện thoại có bàn phím gõ thẳng lên tivi — nhanh hơn bấm từng chữ bằng remote.</li>
+<li>iPad / iPhone có bàn phím rời: <kbd>⌘</kbd> <kbd>F</kbd>. Windows: <kbd>Ctrl</kbd> <kbd>F</kbd>.</li>
+</ul>
+
+<h3>Không thấy phim?</h3>
+<ul>
+<li>Thử tên khác: tên tiếng Anh, tên gốc, hoặc bớt chữ.</li>
+<li>Phim có ở trang chưa nằm trong danh sách: <span class="ui">Đổi trang phim</span> → <span class="ui">＋ Thêm trang khác…</span> rồi gõ tên miền của trang.</li>
+<li>Tìm kiếm không lọc theo hồ sơ trẻ em.</li>
+</ul>
+
+<h3>Cách khác để tìm phim hay</h3>
+<ul>
+<li><strong>Điểm IMDb cao</strong> (menu): Phim lẻ, Phim bộ, Hàn Quốc, Âu Mỹ, Trung Quốc, Hoạt hình — xếp theo điểm IMDb có tính số lượt chấm. Lần đầu mở mất khoảng 20 giây, sau đó app lưu 12 giờ.</li>
+<li>Danh mục của KKPhim có nút <span class="ui">Điểm IMDb cao</span> ở đầu mục để xếp lại theo điểm.</li>
+<li><span class="ui">Thể loại…</span> / <span class="ui">Quốc gia…</span> ở menu của các trang có bộ lọc.</li>
+<li>Trang phim: hàng <span class="ui">Cùng bộ</span> và <span class="ui">Cùng thể loại</span>.</li>
+</ul>
+<a class="toplink" href="#top">↑ Về đầu trang</a>
+</div>
+</section>
+
+<!-- 05 -->
+<section class="topic" id="mang" aria-labelledby="mang-h">
+<div class="topic-head">
+<p class="eyebrow">05 · Mạng</p>
+<h2 id="mang-h">Vào được trang bị chặn: DNS mã hoá, vượt chặn, proxy.</h2>
+<p class="lead">App có sẵn ba lớp. Mặc định đã bật hai lớp đầu — đủ cho hầu hết các nhà. Chỉ cần chỉnh khi một trang vẫn không vào được.</p>
+</div>
+<div class="body">
+
+<div class="layers">
+<div class="layer"><span class="state">Bật sẵn</span><h4>DNS mã hoá</h4><p>Hỏi địa chỉ trang qua đường mã hoá (NextDNS → Cloudflare → Google). Nhà mạng hay bộ lọc trong nhà không đọc, không sửa được. Máy chủ nào bị chặn thì app hỏi máy sau; hỏng hết thì dùng DNS của máy — không bao giờ làm app hỏng.</p></div>
+<div class="layer"><span class="state">Mức 1 bật sẵn</span><h4>Vượt chặn nhà mạng</h4><p>Nhà mạng chặn bằng cách đọc tên trang lúc mở kết nối. App chia nhỏ gói đầu tiên để máy soi không đọc được tên — không cần VPN. Mức 2 đảo thêm thứ tự gói, cho khi Mức 1 không còn lọt.</p></div>
+<div class="layer"><span class="state off">Tắt sẵn</span><h4>Proxy</h4><p>Đi đường vòng qua một máy chủ của bạn. Shadowsocks mã hoá cả đường đi (nên dùng); SOCKS5 không mã hoá. Chỉ dùng khi hai lớp trên không đủ.</p></div>
+</div>
+<figure class="shot">
+<div class="frame"><a href="assets/hd/cai-dat-mang.jpg" class="zoom" aria-label="Xem ảnh cỡ lớn"><img src="assets/hd/cai-dat-mang.jpg" alt="Cài đặt trên tivi: DNS mã hoá Bật, NextDNS rồi Cloudflare rồi Google; Vượt chặn nhà mạng Mức 1 chia nhỏ" width="1280" height="720" loading="lazy"></a></div>
+<figcaption>Cài đặt → DNS mã hoá và Vượt chặn nhà mạng. Nút vượt chặn đổi vòng: Tắt → Mức 1 → Mức 2 → Tắt.</figcaption>
+</figure>
+
+<h3>Cài đặt nên dùng</h3>
+<table class="grid">
+<thead><tr><th>Tình huống</th><th>DNS mã hoá</th><th>Vượt chặn</th><th>Proxy</th></tr></thead>
+<tbody>
+<tr><td>Hầu hết các nhà (mặc định)</td><td data-label="DNS mã hoá">Bật</td><td data-label="Vượt chặn">Mức 1</td><td data-label="Proxy">Tắt</td></tr>
+<tr><td>Một trang vẫn treo hoặc báo lỗi ở Mức 1</td><td data-label="DNS mã hoá">Bật</td><td data-label="Vượt chặn">Mức 2</td><td data-label="Proxy">Tắt</td></tr>
+<tr><td>Mức 2 vẫn không vào được</td><td data-label="DNS mã hoá">Bật</td><td data-label="Vượt chặn">Mức 2</td><td data-label="Proxy">Shadowsocks · DNS của proxy · chỉ trang phim</td></tr>
+</tbody>
+</table>
+<ul>
+<li>Đừng tắt DNS mã hoá: gần như không làm chậm (app giữ sẵn kết nối, mỗi lần hỏi khoảng 20–100 ms) và tự lui về DNS của máy khi bị chặn.</li>
+<li>Mức 2 chậm thêm khoảng 10–40 ms mỗi kết nối (Windows khoảng 0,1 giây, cần bản 1.13 trở lên). Đã vào được thì để nguyên Mức 2 cũng được.</li>
+<li>Bật cùng lúc cả ba được. Đi qua proxy thì phần đó do proxy lo; vượt chặn vẫn giúp các kết nối đi thẳng (video, ảnh khi chọn «chỉ trang phim»).</li>
+</ul>
+
+<h3>Gặp gì, làm gì</h3>
+<table class="grid">
+<thead><tr><th>Bạn thấy</th><th>Nên làm</th></tr></thead>
+<tbody>
+<tr><td>Trang mở mãi rồi báo quá giờ hoặc lỗi SSL; dùng VPN thì vào được</td><td data-label="Nên làm">Nhà mạng chặn theo tên trang. Kiểm tra Vượt chặn đang ở Mức 1; vẫn không được thì bấm nút thêm một lần sang Mức 2 rồi mở lại trang.</td></tr>
+<tr><td>Ảnh bìa trắng, hoặc báo không tìm thấy trang dù trang vẫn sống</td><td data-label="Nên làm">Mạng nhà có bộ lọc DNS. Bật DNS mã hoá (bật sẵn từ bản 2.11).</td></tr>
+<tr><td>Mức 2 vẫn không vào được</td><td data-label="Nên làm">Bật proxy Shadowsocks — xem các bước bên dưới.</td></tr>
+<tr><td>Bật proxy xong thì video lỗi</td><td data-label="Nên làm">Chọn <span class="ui">Dùng cho: chỉ trang phim</span> — máy chủ video có thể chặn địa chỉ của proxy.</td></tr>
+<tr><td>Cài đặt ghi «WebView quá cũ: chỉ phần đọc trang»</td><td data-label="Nên làm">Tivi đời cũ: cập nhật <strong>Android System WebView</strong> trên CH Play (nếu tivi cho cập nhật) để vượt chặn áp dụng cho cả trình phát.</td></tr>
+<tr><td>Video giật, dừng chờ tải</td><td data-label="Nên làm">Không phải do bị chặn: đổi server trong menu ▼ — xem <a href="#xem-phim">mục 06</a>.</td></tr>
+</tbody>
+</table>
+<div class="callout"><span class="t">Kiểm tra nhanh</span><p>Menu → <span class="ui">Đổi trang phim</span>: app đo từng trang ngay khi mở — trang nhanh nhất có dấu ★; «✗ không vào được» là không kết nối được; «không đọc được phim» là vào được nhưng không có danh sách phim (có thể là trang chặn của nhà mạng). Trong Cài đặt, nút <span class="ui">Kiểm tra kết nối</span> cho biết đọc được bao nhiêu phim từ trang đang dùng.</p></div>
+
+<h3>Cài proxy Shadowsocks</h3>
+<ol class="steps">
+<li><span><span class="ui">Cài đặt</span> → mục <span class="ui">Proxy (SOCKS5 / Shadowsocks)</span> → nút <span class="ui">Kiểu</span> chọn <strong>Shadowsocks</strong>.</span></li>
+<li><span>Dán link <span class="ui">ss://</span> vào ô máy chủ — app tự điền máy chủ, cổng, kiểu mã hoá và khoá. Trên tivi nên dán bằng bàn phím của app Google TV trên điện thoại; iPad / iPhone có nút «Dán link ss:// từ bộ nhớ tạm»; Windows có ô «Dán link».</span></li>
+<li><span><span class="ui">Kiểm tra proxy</span> (thử ngay, chưa cần lưu): app báo địa chỉ ra ngoài, nơi đặt máy chủ và thời gian phản hồi. Được thì bấm <span class="ui">Lưu</span>.</span></li>
+<li><span>Bấm <span class="ui">Proxy: Tắt</span> để chuyển thành <span class="ui">Bật</span>. Màn hình chính ghi «· proxy» khi đang bật.</span></li>
+</ol>
+<ul>
+<li><strong>DNS: của proxy</strong> (nên chọn) — proxy tự tìm địa chỉ trang, vượt được cả chặn tên miền. «Của thiết bị»: máy tự tìm rồi chỉ gửi địa chỉ cho proxy.</li>
+<li><strong>Dùng cho: chỉ trang phim</strong> (nên chọn) — video, ảnh, cập nhật app đi thẳng mạng nhà: nhanh hơn, đỡ tốn proxy. «Toàn bộ app» khi video cũng bị chặn.</li>
+<li>Shadowsocks 2022 cần đồng hồ của máy đúng giờ (lệch tối đa 30 giây). App hỗ trợ kiểu TCP thường — máy chủ 3X-UI: Transmission TCP, Security None.</li>
+<li>Proxy lỗi (chết, sai khoá) thì app báo rõ, không tự đi thẳng. SOCKS5 không mã hoá: nhà mạng thấy tên trang và tên đăng nhập, mật khẩu proxy.</li>
+</ul>
+<a class="toplink" href="#top">↑ Về đầu trang</a>
+</div>
+</section>
+
+<!-- 06 -->
+<section class="topic" id="xem-phim" aria-labelledby="xem-phim-h">
+<div class="topic-head">
+<p class="eyebrow">06 · Xem phim</p>
+<h2 id="xem-phim-h">Đừng chờ phim tải: nhấn ▼.</h2>
+<p class="lead">Ngay lúc phim đang tải, nhấn <kbd>▼</kbd> để mở menu: đổi server, đổi bản Vietsub / Thuyết minh, đổi tập — không cần chờ video chạy.</p>
+</div>
+<div class="body">
+
+<h3>Lúc phim đang tải</h3>
+<p>Màn hình lần lượt ghi «Đang tải thông tin phim…» → «Đang mở Tập …» → «Đang tải &lt;tên server&gt;…». Dòng dưới cùng luôn nhắc phím.</p>
+<figure class="shot">
+<div class="frame"><a href="assets/hd/xem-phim-dang-tai.jpg" class="zoom" aria-label="Xem ảnh cỡ lớn"><img src="assets/hd/xem-phim-dang-tai.jpg" alt="Màn đang tải phim: vòng xoay, dòng Đang tải thông tin phim và dòng nhắc OK dừng phát, mũi tên tua, mũi tên xuống mở menu, Back thoát" width="1280" height="720" loading="lazy"></a></div>
+<figcaption>Màn đang tải: OK dừng / phát · ◀ ▶ tua · ▼ menu (đổi server, đổi tập) · Back thoát.</figcaption>
+</figure>
+<ul>
+<li>App tự chọn server: server bạn chọn lần trước ở trang này. Nếu server đó gần đây hay giật hoặc hay lỗi trên chính máy này, app tự mở server tốt hơn và báo «… hay giật gần đây — mở … (▼ để đổi server)».</li>
+<li>Thấy chờ lâu: nhấn <kbd>▼</kbd>, chọn server khác — app mở ngay, nhớ lựa chọn cho lần sau.</li>
+</ul>
+<figure class="shot">
+<div class="frame"><a href="assets/hd/xem-phim-menu.jpg" class="zoom" aria-label="Xem ảnh cỡ lớn"><img src="assets/hd/xem-phim-menu.jpg" alt="Menu mở lúc phim đang tải: tên phim Tiên Nghịch tập 165, hàng server VIETSUB 1080, VIETSUB 4K, Thuyết minh 1080 ghi hay giật, mở 19 giây; hàng nút Tập trước, Tập sau, Thu nhỏ vào góc, Tải lại, Danh sách tập, Tốc độ; hàng Nhạc mở đầu" width="1280" height="720" loading="lazy"></a></div>
+<figcaption>Menu ▼ mở khi phim còn đang tải. Server «Thuyết minh 1080 V1» ghi «hay giật, mở 19 s» — điểm từ những lần xem trước trên chính tivi này.</figcaption>
+</figure>
+
+<h3>Trong menu ▼ có gì</h3>
+<table class="grid">
+<thead><tr><th>Mục</th><th>Dùng để</th></tr></thead>
+<tbody>
+<tr><td>Bản phim</td><td data-label="Dùng để">Vietsub / Thuyết minh / Lồng tiếng — ở các trang có chia bản.</td></tr>
+<tr><td>Server</td><td data-label="Dùng để">Chọn là mở luôn, xem tiếp đúng chỗ. Nhãn bên cạnh: <strong>mượt</strong>, <strong>hơi giật</strong>, <strong>hay giật</strong>, <strong>hay lỗi</strong>, «mở 4 s» — chấm theo các lần xem trên chính máy này. Đang phát thì dòng tiêu đề ghi «Server — lần xem này: mở 6 s · chưa giật lần nào».</td></tr>
+<tr><td>KKPhim / NguonC</td><td data-label="Dùng để">Server dự phòng cho yanhh3d, hoathinh3d, hhkungfu: app tự tìm cùng phim, cùng tập trên KKPhim / NguonC, không quảng cáo. Có khi bản dài ngắn khác bản của trang vài giây.</td></tr>
+<tr><td>◀ Tập trước · Tập sau ▶</td><td data-label="Dùng để">Đổi tập. <span class="ui">Danh sách tập</span> đóng trình phát, quay về màn trước để chọn tập khác — chỗ đang xem đã được lưu.</td></tr>
+<tr><td>Thu nhỏ vào góc</td><td data-label="Dùng để">Phim chạy tiếp ở góc màn hình, vẫn chọn phim khác được. Đầu menu bên trái có <span class="ui">▶ Phóng to</span> và <span class="ui">✕ Tắt phim thu nhỏ</span>.</td></tr>
+<tr><td>Tải lại</td><td data-label="Dùng để">Khi video đứng hẳn hoặc mất kết nối.</td></tr>
+<tr><td>Tốc độ</td><td data-label="Dùng để">1× → 1,25× → 1,5× → 2× → 0,75×.</td></tr>
+<tr><td>Khung hình</td><td data-label="Dùng để">Vừa màn hình / Lấp đầy (cắt bớt viền đen).</td></tr>
+<tr><td>Hẹn giờ tắt</td><td data-label="Dùng để">30, 60, 90 phút hoặc hết tập này. Hết giờ phim dừng; 60 giây không ai bấm thì app tự thoát.</td></tr>
+<tr><td>Mở trang Web</td><td data-label="Dùng để">Mở trang tập trong trình duyệt của app, bấm thẳng vào trình phát của trang.</td></tr>
+<tr><td>Nhạc mở đầu</td><td data-label="Dùng để">Đúng lúc hết nhạc, bấm <span class="ui">Hết nhạc ở …</span> (nhạc không nằm ngay đầu tập thì bấm <span class="ui">Bắt đầu ở …</span> lúc nhạc bắt đầu). Các tập sau tự tua qua; <span class="ui">Bỏ mốc</span> để tắt.</td></tr>
+</tbody>
+</table>
+
+<h3>Khi có sự cố</h3>
+<table class="grid">
+<thead><tr><th>Bạn thấy</th><th>Nên làm</th></tr></thead>
+<tbody>
+<tr><td>«… không phát được video. Nhấn ▼ để chọn server khác.»</td><td data-label="Nên làm">Chọn server khác, ưu tiên server ghi «mượt».</td></tr>
+<tr><td>«Mất kết nối video»</td><td data-label="Nên làm"><kbd>▼</kbd> → <span class="ui">Tải lại</span>, hoặc chọn server khác.</td></tr>
+<tr><td>Hộp gợi ý đổi server (khi video giật nhiều)</td><td data-label="Nên làm"><kbd>OK</kbd> để chuyển sang server được gợi ý, xem tiếp đúng chỗ; <kbd>Back</kbd> để bỏ qua.</td></tr>
+<tr><td>Menu ghi «TV rớt …% khung hình»</td><td data-label="Nên làm">Tivi xử lý không kịp, đổi server không đỡ. Chọn bản 1080 thay vì 4K.</td></tr>
+<tr><td>Server nào cũng không chạy</td><td data-label="Nên làm">Trang có thể đang bị chặn — xem <a href="#mang">mục 05</a>; hoặc thử <span class="ui">Mở trang Web</span>.</td></tr>
+<tr><td>Phim CLB Phim Xưa mở chậm</td><td data-label="Nên làm">Bình thường trên TV box: mất khoảng 25–35 giây, chờ thêm chút.</td></tr>
+</tbody>
+</table>
+
+<h3>Phím khi xem phim</h3>
+<table class="grid">
+<thead><tr><th>Máy</th><th>Phím</th></tr></thead>
+<tbody>
+<tr><td>Remote tivi</td><td data-label="Phím"><kbd>OK</kbd> dừng / phát · <kbd>◀</kbd> <kbd>▶</kbd> tua, giữ để tua nhanh dần · <kbd>▲</kbd> xem thời gian · <kbd>▼</kbd> / <kbd>Menu</kbd> mở menu · phím số <kbd>0</kbd>–<kbd>9</kbd> nhảy tới 0–90% · <kbd>CH+</kbd> / <kbd>CH−</kbd> tập sau / trước · <kbd>Back</kbd> thoát</td></tr>
+<tr><td>Màn cảm ứng (điện thoại, iPad / iPhone)</td><td data-label="Phím">Chạm vào phim hiện thanh nút (tập trước, lùi / tới 10 giây, dừng, tập sau, Menu, Thoát) · chạm đúp nửa trái / phải: lùi / tới 10 giây · vuốt ngang để tua · giữ tay xem nhanh 2× · vuốt dọc nửa trái độ sáng, nửa phải âm lượng · chụm / mở hai ngón: vừa màn / lấp đầy</td></tr>
+<tr><td>Bàn phím (Windows, iPad)</td><td data-label="Phím"><kbd>Space</kbd> / <kbd>K</kbd> dừng / phát · <kbd>◀</kbd> <kbd>▶</kbd> (<kbd>J</kbd> / <kbd>L</kbd>) tua · <kbd>▼</kbd> / <kbd>M</kbd> menu · <kbd>N</kbd> / <kbd>P</kbd> tập sau / trước · <kbd>0</kbd>–<kbd>9</kbd> nhảy tới 0–90% · <kbd>Esc</kbd> thoát</td></tr>
+</tbody>
+</table>
+<div class="callout"><span class="t">Trên Windows</span><p>Bản Windows chưa chấm điểm server: nút server không có nhãn «mượt / hay giật». Menu còn có «Bấm thẳng vào trang» và mở trang tập trên trình duyệt.</p></div>
+<a class="toplink" href="#top">↑ Về đầu trang</a>
+</div>
+</section>
+
+</main>
+
+<footer class="wrap site-foot">
+<nav aria-label="Liên kết">
+<a href="index.html">Trang chủ</a>
+<a href="index.html#cai-dat">Cài app</a>
+<a href="https://github.com/Circling5714/ChimToTV">GitHub</a>
+<a href="https://github.com/Circling5714/ChimToTV/blob/main/CHANGELOG.md">Nhật ký phiên bản</a>
+<a href="https://t.me/tivikit">Hỏi đáp trên Telegram</a>
+</nav>
+<p>Côn Bằng TV chỉ là trình xem các trang phim công khai trên Internet. App không lưu trữ, không tải lên và không phát tán phim; mọi nội dung do trang web bên thứ ba cung cấp. Tên phim, hình ảnh và nhãn hiệu thuộc về chủ sở hữu hợp pháp.</p>
+</footer>
+
+</div>
+</body>
+</html>
