@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hướng dẫn sử dụng — Côn Bằng TV</title>
 <meta name="description" content="Hướng dẫn chi tiết Côn Bằng TV: người xem, mã PIN và hồ sơ trẻ em; tuỳ chỉnh trang chủ; theo dõi phim; tìm kiếm; DNS mã hoá, vượt chặn nhà mạng và proxy; menu khi xem phim.">
-<meta name="theme-color" content="#0E1014">
+<meta name="theme-color" content="#0B0907">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hướng dẫn sử dụng Côn Bằng TV">
 <meta property="og:description" content="Người xem và mã PIN, hồ sơ trẻ em, tuỳ chỉnh trang chủ, theo dõi phim, tìm kiếm, vượt chặn nhà mạng, menu khi xem phim.">
@@ -17,9 +17,9 @@
 <link rel="apple-touch-icon" href="assets/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--accent:#FFB020;--bg:#0E1014;--surface:#171A21;--surface2:#1F232C;--text:#F2F4F8;--dim:#9AA3B2;--line:rgba(255,255,255,.10);--line2:rgba(255,255,255,.18)}
+:root{--accent:#FFB020;--bg:#0B0907;--surface:#15110D;--surface2:#1E1914;--text:#F6EFE3;--dim:#C9BEAD;--line:rgba(246,239,227,.11);--line2:rgba(246,239,227,.2);--display:'Anton','Arial Narrow','Helvetica Neue Condensed',Impact,sans-serif}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--text);font-family:'Be Vietnam Pro',system-ui,-apple-system,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased;line-height:1.6;overflow-x:hidden}
@@ -30,14 +30,14 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius
 .site-head{display:flex;align-items:center;justify-content:space-between;gap:16px 28px;flex-wrap:wrap;padding-top:20px;padding-bottom:20px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text);min-height:44px}
 .brand img{width:36px;height:36px;border-radius:9px;display:block}
-.brand span{font-size:17px;font-weight:600;letter-spacing:-.01em}
+.brand span{font-family:var(--display);font-size:22px;font-weight:400;letter-spacing:.04em;text-transform:uppercase}
 .site-nav{display:flex;align-items:center;gap:8px 28px;flex-wrap:wrap}
 .site-nav a{font-size:15px;text-decoration:none;padding:12px 0}
 .site-nav a[aria-current]{color:var(--text)}
 .site-nav .pill{color:var(--text);padding:11px 18px;border:1px solid var(--line2);border-radius:999px}
 .eyebrow{margin:0;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
 .hero{padding-top:clamp(36px,7vw,88px);display:flex;flex-direction:column;gap:20px;max-width:780px}
-h1{margin:0;font-size:clamp(38px,6.4vw,72px);line-height:1.06;letter-spacing:-.035em;font-weight:700;text-wrap:balance}
+h1{margin:0;font-family:var(--display);font-size:clamp(40px,6.6vw,82px);line-height:1.1;letter-spacing:.01em;font-weight:400;text-transform:uppercase;text-wrap:balance}
 .lead{margin:0;font-size:clamp(17px,1.9vw,20px);line-height:1.6;color:var(--dim);text-wrap:pretty;max-width:52ch}
 .meta{margin:0;font-size:14px;color:var(--dim)}
 .toc{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:14px;margin:clamp(36px,5vw,56px) 0 0;padding:0;list-style:none}
@@ -48,7 +48,7 @@ h1{margin:0;font-size:clamp(38px,6.4vw,72px);line-height:1.06;letter-spacing:-.0
 .toc small{display:block;margin-top:4px;font-size:15px;color:var(--dim);line-height:1.5}
 .topic{padding-top:clamp(80px,10vw,132px);scroll-margin-top:12px}
 .topic-head{display:flex;flex-direction:column;gap:14px;max-width:780px}
-h2{margin:0;font-size:clamp(30px,4.4vw,50px);line-height:1.1;letter-spacing:-.03em;font-weight:700;text-wrap:balance}
+h2{margin:0;font-family:var(--display);font-size:clamp(32px,4.4vw,56px);line-height:1.12;letter-spacing:.01em;font-weight:400;text-transform:uppercase;text-wrap:balance}
 .body{max-width:780px}
 h3{margin:clamp(44px,5vw,60px) 0 0;font-size:clamp(21px,2.3vw,26px);line-height:1.3;letter-spacing:-.015em;font-weight:600;scroll-margin-top:12px}
 .body p,.body li{font-size:17px;line-height:1.7;color:var(--dim)}
@@ -60,7 +60,7 @@ h3{margin:clamp(44px,5vw,60px) 0 0;font-size:clamp(21px,2.3vw,26px);line-height:
 .ui{color:var(--text)}
 kbd{display:inline-block;min-width:1.7em;padding:0 7px;border:1px solid var(--line2);border-bottom-width:2px;border-radius:7px;background:var(--surface2);color:var(--text);font:inherit;font-size:.86em;line-height:1.55;text-align:center;white-space:nowrap}
 figure.shot{margin:30px 0 0}
-.frame{padding:1.2%;background:#050608;border:1px solid rgba(255,255,255,.12);border-radius:clamp(10px,1.8vw,18px);box-shadow:0 30px 80px rgba(0,0,0,.45)}
+.frame{padding:1.2%;background:#050403;border:1px solid rgba(255,255,255,.12);border-radius:clamp(10px,1.8vw,18px);box-shadow:0 30px 80px rgba(0,0,0,.45)}
 .frame img{display:block;width:100%;height:auto;aspect-ratio:16/9;border-radius:clamp(5px,1vw,10px)}
 .zoom{display:block;border-radius:clamp(5px,1vw,10px);cursor:zoom-in}
 figcaption{margin-top:12px;font-size:15px;line-height:1.55;color:var(--dim)}
@@ -91,7 +91,7 @@ table.grid td:last-child,table.grid th:last-child{padding-right:0}
 .state.off{background:rgba(255,255,255,.08);color:var(--dim)}
 .layer h4{margin:12px 0 0;font-size:19px;font-weight:600}
 .layer p{margin:8px 0 0;font-size:15px;line-height:1.6;color:var(--dim)}
-.picker{margin:30px 0 0;padding:clamp(26px,5vw,48px) 16px;background:#0B0D11;border:1px solid rgba(255,255,255,.12);border-radius:clamp(10px,1.8vw,18px);text-align:center}
+.picker{margin:30px 0 0;padding:clamp(26px,5vw,48px) 16px;background:#0F0C09;border:1px solid rgba(255,255,255,.12);border-radius:clamp(10px,1.8vw,18px);text-align:center}
 .picker .pt{margin:0;font-size:clamp(22px,3vw,30px);font-weight:700}
 .picker .ps{margin:6px 0 0;font-size:14px;color:var(--dim)}
 .avatars{display:flex;justify-content:center;flex-wrap:wrap;gap:12px clamp(10px,3vw,28px);margin-top:26px}
@@ -106,8 +106,8 @@ table.grid td:last-child,table.grid th:last-child{padding-right:0}
 .site-foot nav{display:flex;gap:4px 28px;flex-wrap:wrap}
 .site-foot nav a{display:inline-flex;align-items:center;min-height:44px;font-size:15px;text-decoration:none}
 .site-foot p{margin:0;max-width:78ch;font-size:14px;line-height:1.65;color:var(--dim)}
-.to-top{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:max(20px,calc(env(safe-area-inset-bottom) + 16px));z-index:50;width:52px;height:52px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:rgba(23,26,33,.92);border:1px solid var(--line2);color:var(--text);box-shadow:0 10px 30px rgba(0,0,0,.45);text-decoration:none;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);transition:opacity .2s,transform .2s,visibility .2s,background-color .2s}
-.to-top:hover{color:#1A1204;background:var(--accent);border-color:var(--accent)}
+.to-top{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:max(20px,calc(env(safe-area-inset-bottom) + 16px));z-index:50;width:52px;height:52px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:rgba(21,17,13,.92);border:1px solid var(--line2);color:var(--text);box-shadow:0 10px 30px rgba(0,0,0,.45);text-decoration:none;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);transition:opacity .2s,transform .2s,visibility .2s,background-color .2s}
+.to-top:hover{color:#0B0907;background:var(--accent);border-color:var(--accent)}
 .to-top.is-hidden{opacity:0;visibility:hidden;transform:translateY(12px);pointer-events:none}
 @media (prefers-reduced-motion: reduce){.to-top{transition:none}}
 </style>
