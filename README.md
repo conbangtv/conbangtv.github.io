@@ -9,7 +9,7 @@ Mã nguồn của trang <https://conbangtv.github.io> — các tệp HTML tĩnh 
   menu khi xem phim. Ảnh chụp từ bản Android TV chính thức trong `assets/hd/` (JPEG 1280×720). App đổi giao diện hay tên mục
   thì sửa trang này theo, và đổi dòng «Theo bản …» ở đầu trang.
 
-- App và mã nguồn: <https://github.com/Circling5714/ChimToTV>
+- App và mã nguồn: <https://github.com/conbangtv/ChimToTV>
 - Cài trên Android TV: mở app Downloader, nhập mã `9192365`.
 - Liên hệ: Telegram [t.me/tivikit](https://t.me/tivikit)
 
