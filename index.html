@@ -154,7 +154,7 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:
 <li><span><strong>Nhập mã.</strong> Mở Downloader, nhập <strong>9192365</strong> vào ô địa chỉ rồi bấm Go.</span></li>
 <li><span><strong>Bấm Install.</strong> Lần đầu tivi hỏi cho phép Downloader cài ứng dụng thì bật cho phép, rồi bấm Install lại. Các bản sau app tự cập nhật.</span></li>
 </ol>
-<a href="https://github.com/conbangtv/ChimToTV/releases/latest/download/ConBangTV.apk" class="alink" style="font-size: 16px">Hoặc tải thẳng tệp APK (khoảng 1,3 MB)
+<a href="https://github.com/conbangtv/ChimToTV/releases/latest/download/ConBangTV.apk" class="alink" style="font-size: 16px">Hoặc tải thẳng tệp APK (khoảng 150 MB)
 <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12"></path><path d="M6 11l6 6 6-6"></path><path d="M5 20h14"></path></svg>
 </a>
 </div>
@@ -321,6 +321,7 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:
 <li><strong>Vượt chặn nhà mạng</strong> bật sẵn: chia nhỏ gói đầu tiên để máy soi của nhà mạng không đọc được tên trang; trang nào vẫn không lọt thì app tự lên Mức 2 cho riêng trang đó.</li>
 <li><strong>DNS mã hoá</strong> (DoH / DoT) bật sẵn: nhà mạng không đổi được địa chỉ trang, lần lượt NextDNS → Cloudflare → Google.</li>
 <li><strong>Proxy SOCKS5 / Shadowsocks</strong> nếu bạn có máy chủ riêng; dán link <code>ss://</code> là tự điền.</li>
+<li><strong>Trang bật lớp chống bot</strong> của Cloudflare («Just a moment…», như hoathinh3d.pw): app tự mở hộ bằng một trình duyệt ẩn, bạn không phải làm gì.</li>
 <li>Trang đổi tên miền thì app tự đổi theo khi trang báo chuyển.</li>
 </ul>
 <a class="acc" href="huong-dan.html#mang">Khi trang không vào được →</a>
@@ -389,10 +390,11 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:
 <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(min(330px, 100%), 1fr))">
 <div class="card plat">
 <h3>Android TV và TV box</h3>
-<p class="req">Android 5.0 trở lên · tệp APK khoảng 1,3 MB</p>
+<p class="req">Android 5.0 trở lên · tệp APK khoảng 150 MB</p>
 <ul class="ticks">
 <li>Điều khiển trọn bằng remote; có con trỏ ảo khi cần bấm vào trang web.</li>
 <li>Thu nhỏ phim vào góc, hình trong hình.</li>
+<li>Gói kèm engine của Firefox để mở hộ trang bật chống bot (như hoathinh3d.pw) — vì vậy tệp lớn hơn trước.</li>
 </ul>
 <div class="links">
 <a class="acc" href="#cai-dat">Cài bằng mã 9192365</a>
@@ -424,10 +426,11 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:
 </div>
 <div class="card plat">
 <h3>Windows</h3>
-<p class="req">Windows 10 và 11 · một tệp .exe khoảng 70 MB, mở là chạy</p>
+<p class="req">Windows 10 và 11 · một tệp .exe khoảng 120 MB, mở là chạy</p>
 <ul class="ticks">
 <li>Chuột hoặc bàn phím / remote; cỡ giao diện tới 175% cho máy cắm tivi.</li>
 <li>Cửa sổ phim nhỏ luôn nổi ở góc màn hình.</li>
+<li>Trình phát riêng (mpv) giải mã bằng card đồ hoạ: nhẹ máy, đỡ tốn RAM hơn hẳn; lỗi thì tự quay về trình phát web.</li>
 </ul>
 <div class="links">
 <a class="acc" href="https://github.com/conbangtv/ChimToTV/releases/download/conbangtv_windows/ConBangTV-Windows.exe">Tải bản Windows</a>
@@ -448,10 +451,11 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:
 </div>
 <div class="card plat">
 <h3>Linux</h3>
-<p class="req">Ubuntu 22.04+, Linux Mint 21+, Debian 12+ (64-bit) · tệp .deb khoảng 5,4 MB</p>
+<p class="req">Ubuntu 22.04+, Linux Mint 21+, Debian 12+ (64-bit) · tệp .deb khoảng 5,5 MB</p>
 <ul class="ticks">
 <li>Giao diện và phím như bản Windows, có cửa sổ phim nhỏ.</li>
 <li>Cài một lần bằng App Center, sau đó app tự cập nhật.</li>
+<li>Trình phát riêng (mpv) cho KKPhim, VSMOV, CLB Phim Xưa — đỡ tốn CPU hơn trình phát web.</li>
 </ul>
 <div class="links">
 <a class="acc" href="https://github.com/conbangtv/ChimToTV/releases/download/conbangtv_linux/ConBangTV-Linux.deb">Tải bản Linux</a>
