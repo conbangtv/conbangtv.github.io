@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Côn Bằng TV — phim hay từ nhiều trang, gom về một chỗ</title>
-<meta name="description" content="Côn Bằng TV gom phim từ nhiều trang web về một trang chủ. Dùng trên Android TV, điện thoại, iPad / iPhone, Windows, Mac và Linux — bằng remote, cảm ứng hay chuột, bàn phím. Miễn phí, không tài khoản. Cài trên Android TV bằng mã Downloader 9192365.">
+<meta name="description" content="Côn Bằng TV gom phim từ nhiều trang web về một trang chủ, xem cả truyền hình và radio từ danh sách kênh của bạn. Dùng trên Android TV, điện thoại, iPad / iPhone, Windows, Mac và Linux — bằng remote, cảm ứng hay chuột, bàn phím. Miễn phí, không tài khoản. Cài trên Android TV bằng mã Downloader 9192365.">
 <meta name="theme-color" content="#0B0907">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Côn Bằng TV — phim hay từ nhiều trang, gom về một chỗ">
@@ -14,7 +14,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://conbangtv.github.io/">
 <link rel="icon" type="image/png" href="assets/logo.png">
-<link rel="apple-touch-icon" href="assets/logo.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -67,6 +67,41 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:
 .shot::before,.shot::after{content:"";display:block;height:clamp(14px,1.8vw,22px);background:repeating-linear-gradient(90deg,#2B241B 0 18px,transparent 18px 34px) center/100% 40% no-repeat,#15110D}
 .shot img{width:100%;height:auto;display:block}
 .cap{margin:14px 0 0;font-size:14px;line-height:1.5;color:var(--faint)}
+/* Minh hoạ mục Truyền hình · Radio (tên kênh là ví dụ — không chụp kênh thật) */
+.tvm{container-type:inline-size;background:#0B0E14}
+.tvm-in{aspect-ratio:16/9;display:grid;grid-template-columns:23% minmax(0,1fr);gap:2cqw;padding:2.6cqw;box-sizing:border-box;font-size:1.55cqw;line-height:1.35;color:#F2F4F8}
+.tvm-side{display:flex;flex-direction:column;gap:.8cqw;min-width:0}
+.tvm-side b{font-size:2.2cqw;font-weight:700;margin-bottom:.8cqw}
+.tvm-side .g{padding:.9cqw 1.3cqw;border-radius:1cqw;color:#9AA3B2}
+.tvm-side .g.on{background:#232833;color:#F2F4F8}
+.tvm-note{margin-top:auto;font-size:1.15cqw;letter-spacing:.06em;text-transform:uppercase;color:#6F7787}
+.tvm-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:1fr;gap:1.4cqw;min-width:0}
+.tvm-card{background:#171A21;border:.25cqw solid transparent;border-radius:1.2cqw;padding:1.3cqw;display:flex;flex-direction:column;gap:.6cqw;min-width:0}
+.tvm-card.on{border-color:var(--accent);box-shadow:0 0 0 .35cqw rgba(255,176,32,.22)}
+.tvm-top{display:flex;align-items:center;gap:1cqw;min-width:0}
+.tvm-logo{flex:none;width:4.2cqw;height:4.2cqw;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.4cqw;font-weight:700;color:#fff}
+.tvm-top div{min-width:0}
+.tvm-name{display:block;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tvm-no,.tvm-next{color:#9AA3B2;font-size:1.3cqw;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tvm-tag{align-self:flex-start;font-size:1.1cqw;font-weight:700;letter-spacing:.06em;padding:.2cqw .8cqw;border-radius:.6cqw;background:#E5533D;color:#fff}
+.tvm-tag.soon{background:#2F6FDB}.tvm-tag.radio{background:#7A5AF8}
+.tvm-prog{margin-top:auto;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tvm-bar{height:.45cqw;border-radius:1cqw;background:#2A2F3A;overflow:hidden}
+.tvm-bar i{display:block;height:100%;background:var(--accent)}
+@container (max-width:560px){
+.tvm-in{aspect-ratio:auto;grid-template-columns:minmax(0,1fr);gap:3cqw;padding:4cqw;font-size:3.3cqw}
+.tvm-side{flex-direction:row;flex-wrap:wrap;gap:1.6cqw}
+.tvm-side b{width:100%;font-size:4.4cqw;margin:0}
+.tvm-side .g{padding:1.4cqw 2.6cqw;border-radius:2cqw}
+.tvm-side .x,.tvm-card.x{display:none}
+.tvm-note{order:9;width:100%;margin-top:0;font-size:2.6cqw}
+.tvm-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:2.6cqw}
+.tvm-card{padding:2.6cqw;border-radius:2.4cqw;gap:1.3cqw;border-width:.5cqw}
+.tvm-logo{width:8.4cqw;height:8.4cqw;font-size:2.8cqw}
+.tvm-no,.tvm-next{font-size:2.8cqw}
+.tvm-tag{font-size:2.3cqw;padding:.4cqw 1.6cqw;border-radius:1.2cqw}
+.tvm-bar{height:1cqw}
+}
 .row{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(440px,100%),1fr));gap:clamp(24px,4vw,56px);align-items:center}
 .row+.row{margin-top:clamp(64px,9vw,112px)}
 .row .text{display:flex;flex-direction:column;gap:18px}
@@ -153,7 +188,7 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:
 <div class="bulbs-in">
 <p class="eyebrow" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 16px"><span>Đang chiếu</span><span aria-hidden="true">·</span><span>Mọi trang phim</span><span aria-hidden="true">·</span><span>Mọi màn hình</span></p>
 <h1 style="margin: 0; max-width: 13ch; font-family: var(--display); font-weight: 400; font-size: clamp(44px, 8.4vw, 120px); line-height: 1.08; letter-spacing: .01em; text-transform: uppercase; text-wrap: balance">Phim hay từ nhiều&nbsp;trang, gom&nbsp;về một&nbsp;chỗ.</h1>
-<p class="lead" style="max-width: 58ch; font-size: clamp(17px, 1.8vw, 20px)">Côn Bằng TV gom phim mới từ nhiều trang web về một trang chủ gọn gàng: phim trùng gộp làm một, video giật thì đổi server bằng một nút, trang bị nhà mạng chặn vẫn vào được. Xem trên tivi, điện thoại, iPad hay máy tính — bấm remote, chạm màn hình hay dùng chuột, bàn phím đều thuận tay.</p>
+<p class="lead" style="max-width: 58ch; font-size: clamp(17px, 1.8vw, 20px)">Côn Bằng TV gom phim mới từ nhiều trang web về một trang chủ gọn gàng: phim trùng gộp làm một, video giật thì đổi server bằng một nút, trang bị nhà mạng chặn vẫn vào được. Có cả truyền hình và radio từ danh sách kênh của bạn. Xem trên tivi, điện thoại, iPad hay máy tính — bấm remote, chạm màn hình hay dùng chuột, bàn phím đều thuận tay.</p>
 <div style="display: flex; align-items: center; justify-content: center; gap: 12px 14px; flex-wrap: wrap; padding-top: 6px">
 <a href="#cai-dat" class="btn">Cài trên Android TV</a>
 <a href="#nen-tang" class="btn-ghost">Tải cho máy khác</a>
@@ -249,6 +284,9 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:
 <article><span class="reel-no">CUỘN 07</span><h3>Mỗi người một hồ sơ</h3><p class="muted">Lịch sử riêng, khoá bằng mã PIN, hồ sơ trẻ em chỉ có hoạt hình hợp tuổi, giới hạn giờ xem và giờ đi ngủ.</p></article>
 <article><span class="reel-no">CUỘN 08</span><h3>Xem dở ở tivi, xem tiếp trên iPad</h3><p class="muted">Các máy trong nhà tự đồng bộ lịch sử, chỗ đang xem và phim theo dõi với nhau, không qua máy chủ nào.</p></article>
 <article><span class="reel-no">CUỘN 09</span><h3>Điểm IMDb ngay trên ảnh phim</h3><p class="muted">Nhãn điểm IMDb trên từng phim, mục «Điểm IMDb cao» và nút xếp theo điểm để chọn phim nhanh hơn.</p></article>
+<article><span class="reel-no">CUỘN 10</span><h3>Truyền hình · Radio từ danh sách của bạn</h3><p class="muted">Thêm danh sách M3U mà bạn có quyền xem — app không kèm sẵn kênh nào. Kênh chia nhóm, có logo, lịch phát sóng, đài radio; nguồn lỗi tự sang nguồn sau.</p></article>
+<article><span class="reel-no">CUỘN 11</span><h3>Trận đang đá, sắp đá</h3><p class="muted">Kênh trận đấu có nhãn ĐANG ĐÁ / SẮP ĐÁ kèm giờ bóng lăn và được xếp lên trước. Chọn «Nhắc lúc bóng lăn» là app nhắc khi tới giờ.</p></article>
+<article><span class="reel-no">CUỘN 12</span><h3>Dán một lần, thêm cả loạt</h3><p class="muted">Có sẵn nhiều tên miền trang phim hay nhiều địa chỉ danh sách kênh? Dán một lần, mỗi dòng một mục — cái đã có tự bỏ qua.</p></article>
 </div>
 </section>
 
@@ -263,6 +301,7 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:
 <li>Hàng gợi ý <strong>Giống «phim vừa xem»</strong>, theo thể loại bạn hay xem, thuyết minh / lồng tiếng mới.</li>
 <li>Phim có ở nhiều trang chỉ hiện một lần, ghi «3 nguồn»; vào phim là chọn được nguồn.</li>
 <li>Nhấn phím Menu trên một hàng để ẩn hoặc đổi chỗ hàng đó; tự thêm hàng theo loại phim, nước, thể loại, ngôn ngữ.</li>
+<li>Có danh sách kênh thì thêm 4 hàng truyền hình: <strong>Kênh vừa xem</strong>, <strong>Kênh yêu thích</strong>, <strong>Trận đang / sắp đá</strong>, <strong>Radio</strong> — bấm là phát.</li>
 <li>Trang nào chậm hay lỗi thì dùng bản đã lưu, không bắt cả trang chủ chờ.</li>
 </ul>
 <a class="acc" href="huong-dan.html#trang-chu">Cách tuỳ chỉnh trang chủ →</a>
@@ -346,6 +385,40 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:
 </div>
 <figure class="shot"><img src="assets/hd/cai-dat-mang.jpg" alt="Cài đặt mạng trên tivi: DNS mã hoá, vượt chặn nhà mạng mức 1 và 2, proxy" width="1280" height="720" loading="lazy"></figure>
 </div>
+
+<div class="row" id="truyen-hinh" style="scroll-margin-top: 16px">
+<div class="text">
+<p class="eyebrow">Truyền hình · Radio</p>
+<h3 class="h3">Kênh của bạn, xem ngay trong app.</h3>
+<ul class="ticks">
+<li>Mục <strong>Truyền hình · Radio</strong> trong menu: thêm danh sách M3U / M3U8 mà bạn có quyền xem — dán địa chỉ (nhiều địa chỉ một lần, mỗi dòng một danh sách), chọn tệp .m3u, hoặc trên tivi gửi từ điện thoại qua Wi-Fi. App không kèm sẵn kênh nào.</li>
+<li>Kênh chia theo nhóm, tìm theo tên hoặc số kênh; <strong>Yêu thích</strong> và <strong>Kênh vừa xem</strong> riêng từng người xem.</li>
+<li><strong>Lịch phát sóng</strong> (XMLTV): chương trình đang phát, thanh tiến độ, chương trình kế; lịch hôm qua / hôm nay / ngày mai và nhắc trước giờ phát.</li>
+<li>Kênh trận đấu ghi <strong>ĐANG ĐÁ</strong> / <strong>SẮP ĐÁ</strong> kèm giờ bóng lăn; chọn <strong>Nhắc lúc bóng lăn</strong> để không lỡ trận.</li>
+<li><strong>▲ ▼</strong> hoặc CH+ / CH− đổi kênh, phím số nhảy tới kênh; nguồn lỗi tự sang nguồn sau. Radio hiện logo đài và tên bài đang phát.</li>
+</ul>
+<a class="acc" href="huong-dan.html#truyen-hinh">Cách thêm danh sách kênh →</a>
+</div>
+<figure class="shot">
+<div class="tvm" role="img" aria-label="Minh hoạ mục Truyền hình: cột nhóm kênh bên trái, các thẻ kênh có chương trình đang phát, nhãn Đang đá, Sắp đá và Radio; tên kênh là ví dụ">
+<div class="tvm-in">
+<div class="tvm-side">
+<b>Truyền hình</b>
+<span class="g on">★ Yêu thích</span><span class="g">Tất cả</span><span class="g">Thể thao</span><span class="g x">Phim truyện</span><span class="g x">Thiếu nhi</span><span class="g">📻 Radio</span>
+<span class="tvm-note">Minh hoạ · tên kênh là ví dụ</span>
+</div>
+<div class="tvm-grid">
+<div class="tvm-card on"><div class="tvm-top"><span class="tvm-logo" style="background:#2BB585">TT1</span><div><span class="tvm-name">Thể Thao Một</span><span class="tvm-no">101</span></div></div><span class="tvm-tag">ĐANG ĐÁ · 19:00</span><span class="tvm-prog">Đội Sao Xanh – Đội Sao Đỏ</span><span class="tvm-bar"><i style="width:58%"></i></span><span class="tvm-next">Sau đó: Bình luận sau trận</span></div>
+<div class="tvm-card"><div class="tvm-top"><span class="tvm-logo" style="background:#E5533D">PH</span><div><span class="tvm-name">Phim Hay</span><span class="tvm-no">102</span></div></div><span class="tvm-prog">Phim truyện: Chuyến tàu cuối</span><span class="tvm-bar"><i style="width:32%"></i></span><span class="tvm-next">21:00 · Ca nhạc cuối tuần</span></div>
+<div class="tvm-card"><div class="tvm-top"><span class="tvm-logo" style="background:#2F6FDB">TT2</span><div><span class="tvm-name">Thể Thao Hai</span><span class="tvm-no">103</span></div></div><span class="tvm-tag soon">SẮP ĐÁ · 20:30</span><span class="tvm-prog">Đội Phương Nam – Đội Ven Biển</span><span class="tvm-bar"><i style="width:0"></i></span><span class="tvm-next">🔔 Nhắc lúc bóng lăn</span></div>
+<div class="tvm-card"><div class="tvm-top"><span class="tvm-logo" style="background:#D97706">HH</span><div><span class="tvm-name">Hoạt Hình Vui</span><span class="tvm-no">104</span></div></div><span class="tvm-prog">Chú mèo phiêu lưu – tập 12</span><span class="tvm-bar"><i style="width:71%"></i></span><span class="tvm-next">19:30 · Truyện cổ tích</span></div>
+<div class="tvm-card x"><div class="tvm-top"><span class="tvm-logo" style="background:#B4467F">CN</span><div><span class="tvm-name">Ca Nhạc Xưa</span><span class="tvm-no">105</span></div></div><span class="tvm-prog">Giai điệu thập niên 90</span><span class="tvm-bar"><i style="width:44%"></i></span><span class="tvm-next">20:00 · Nhạc trữ tình</span></div>
+<div class="tvm-card x"><div class="tvm-top"><span class="tvm-logo" style="background:#7A5AF8">PT</span><div><span class="tvm-name">Phát Thanh Đêm</span><span class="tvm-no">201</span></div></div><span class="tvm-tag radio">RADIO</span><span class="tvm-prog">Nhạc không lời</span><span class="tvm-next">AAC · 128 kbps</span></div>
+</div>
+</div>
+</div>
+</figure>
+</div>
 </section>
 
 <!-- Nguồn phim: lịch chiếu -->
@@ -376,7 +449,7 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:
 </div>
 <div style="padding: 22px 0; display: flex; flex-direction: column; gap: 8px">
 <p style="margin: 0; font-size: 17px; font-weight: 600">Trang cùng kiểu</p>
-<p class="muted">App nhận trang theo mẫu giao diện, nên trang khác cùng kiểu thường chạy luôn khi thêm vào danh sách.</p>
+<p class="muted">App nhận trang theo mẫu giao diện, nên trang khác cùng kiểu thường chạy luôn khi thêm vào danh sách. Có sẵn nhiều tên miền thì dán một lần cả loạt, mỗi dòng một trang — trang đã có tự bỏ qua, trang đang xem giữ nguyên.</p>
 </div>
 </div>
 <p class="small" style="margin-top: 12px">Côn Bằng TV không liên kết với các trang trên và không lưu trữ phim — xem <a href="#rieng-tu">Quyền riêng tư</a> và dòng miễn trừ cuối trang.</p>
@@ -419,7 +492,7 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:
 <div class="card room">
 <span class="room-no">PHÒNG 3</span>
 <h3>iPad và iPhone</h3>
-<p class="req">iOS / iPadOS 15 trở lên · cài bằng TrollStore · khoảng 4,5 MB</p>
+<p class="req">iOS / iPadOS 15 trở lên · cài bằng TrollStore · khoảng 6 MB</p>
 <ul class="ticks">
 <li>Widget «Xem tiếp», hình trong hình, vuốt để tua và chỉnh độ sáng.</li>
 <li>Điều khiển bằng màn hình khoá, AirPods; dùng được bàn phím rời.</li>
@@ -446,7 +519,7 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:
 <div class="card room">
 <span class="room-no">PHÒNG 5</span>
 <h3>Mac</h3>
-<p class="req">macOS 12 trở lên · máy Intel và chip Apple · khoảng 8 MB</p>
+<p class="req">macOS 12 trở lên · máy Intel và chip Apple · khoảng 9 MB</p>
 <ul class="ticks">
 <li>Giao diện như bản iPad, menu tiếng Việt; chuột, bàn di chuột, phím tắt.</li>
 <li>Tự cập nhật khi để trong thư mục Ứng dụng.</li>
@@ -459,7 +532,7 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:
 <div class="card room">
 <span class="room-no">PHÒNG 6</span>
 <h3>Linux</h3>
-<p class="req">Ubuntu 22.04+, Linux Mint 21+, Debian 12+ (64-bit) · tệp .deb khoảng 5,5 MB</p>
+<p class="req">Ubuntu 22.04+, Linux Mint 21+, Debian 12+ (64-bit) · tệp .deb khoảng 6 MB</p>
 <ul class="ticks">
 <li>Giao diện và phím như bản Windows, có cửa sổ phim nhỏ.</li>
 <li>Cài một lần bằng App Center, sau đó app tự cập nhật.</li>
@@ -607,6 +680,14 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:
 <div class="ans"><p class="muted">Từ các trang phim công khai trên Internet (xem <a href="#nguon-phim">Nguồn phim</a>). App chỉ là trình xem: không lưu trữ, không tải lên và không phát tán phim; phim nằm trên máy chủ của các trang đó.</p></div>
 </details>
 <details>
+<summary>Thêm trang phim khác thế nào?</summary>
+<div class="ans"><p class="muted">Mở <strong>Đổi trang phim</strong> → <strong>Thêm trang khác</strong> (bản máy tính: ô «Thêm trang»; iPad / iPhone / Mac: ô «Thêm trang» trong «Chọn trang phim») rồi gõ tên miền. Có nhiều trang thì dán một lần, mỗi dòng một trang — trên tivi còn có nút <strong>＋ Thêm nhiều trang…</strong> trong Cài đặt → Danh sách trang phim. Trang đã có tự bỏ qua, trang đang xem giữ nguyên. Trang cùng kiểu giao diện với các trang có sẵn thường chạy luôn.</p></div>
+</details>
+<details>
+<summary>Xem truyền hình, nghe radio được không?</summary>
+<div class="ans"><p class="muted">Được, ở mục <strong>Truyền hình · Radio</strong> trong menu. App <strong>không kèm sẵn kênh nào</strong>: bạn thêm danh sách M3U / M3U8 mà mình có quyền xem — dán địa chỉ (dán được nhiều địa chỉ, mỗi dòng một danh sách) hoặc chọn tệp .m3u; trên tivi còn gửi được từ điện thoại qua Wi-Fi bằng mã QR. Lịch phát sóng lấy theo địa chỉ XMLTV ghi trong danh sách, hoặc đặt trong Cài đặt của mục Truyền hình. Xem <a href="huong-dan.html#truyen-hinh">hướng dẫn</a>.</p></div>
+</details>
+<details>
 <summary>Video giật hoặc không chạy thì làm gì?</summary>
 <div class="ans"><p class="muted">Nhấn <strong>▼</strong> (hoặc Menu) khi đang xem rồi chọn server khác — app ghi điểm từng server theo các lần xem trước nên chọn server «mượt» là chắc nhất. Phim vẫn xem tiếp đúng giây. TV box yếu nên chọn server 1080 thay vì 4K. Trang hỏng hẳn thì dùng <strong>KKPhim</strong> / <strong>NguonC</strong> trong cùng bảng.</p></div>
 </details>
@@ -654,7 +735,7 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:
 <dt>iPad · iPhone · Mac</dt><dd>Swift · SwiftUI · WebKit</dd>
 <dt>Windows</dt><dd>C# · WPF · WebView2 · lõi Rust chung</dd>
 <dt>Linux</dt><dd>Rust · GTK · WebKitGTK</dd>
-<dt>Trình phát</dt><dd>hls.js · mpv</dd>
+<dt>Trình phát</dt><dd>hls.js · mpv · Media3 ExoPlayer · AVPlayer</dd>
 <dt>Nhật ký phiên bản</dt><dd><a href="https://github.com/conbangtv/ChimToTV/blob/main/CHANGELOG.md">CHANGELOG.md</a></dd>
 <dt>Góp ý · báo lỗi</dt><dd><a href="https://t.me/tivikit">t.me/tivikit</a></dd>
 </dl>
